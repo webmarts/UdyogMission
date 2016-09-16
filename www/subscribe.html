@@ -1,0 +1,997 @@
+<html lang="en"><head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+
+    
+    
+    <title>UdyogMission       | List Business</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Airport,Cafe,cinemas,hotels,resots.libraries,night clubs,business classified,easy,cms,installation,best">
+
+    <meta name="keywords" content="Airport,Cafe,cinemas,hotels,resots.libraries,night clubs,business classified,easy,cms,installation,best">
+
+    <meta name="revisit-after" content="3 days">
+
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <link rel="stylesheet" href="css/jquery.ezdz.min.css">
+      
+    <script src="js/jquery-2.1.1.min.js"></script>
+ <script src="js/main.js"></script>
+   <script src="dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
+    <script src="js/jquery.ezdz.min.js"></script>
+    <!-- Styles -->
+    <!-- Bootstrap CSS -->
+    <style type="text/css">
+@import url("main.css");
+</style>
+    
+
+<style>
+    .top-bar{
+        background: #fdfdfd; 
+    }
+    
+    .header-2{
+        background: #ffffff; 
+    }
+    .header-2 .navy > ul > li > ul{
+        background: #ffffff; 
+        
+    }
+    .header-2 .navy > ul > li > a{
+        color: #666    }
+    .header-2 .navy ul ul li a{
+        color: #666        
+    }
+   .header-2 .navy > ul > li > a:hover{
+        color: #32c8de    }
+    .header-2 .navy ul ul li a:hover{
+        color: #32c8de        
+    }
+    .header-2 .navy > ul > .active > a{
+        color: #32c8de    }
+    .header-2 .navy ul ul .active a{
+        color: #32c8de        
+    }
+
+    .real-estate .re-big-form{
+        padding: 15px 0 0 0;
+                background: #9fee9b;        
+            }
+</style>
+
+
+<body class="home" dir="ltr" id="dummybodyid">
+
+<div class="outer">
+<!-- Top bar starts -->
+<div class="top-bar">
+    <div class="container">
+
+       
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<!-- Top bar ends -->
+<!-- Header two Starts -->
+<div class="header-2">
+
+    <!-- Container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <!-- Logo section -->
+                <div class="logo">
+                    <h3><a href="index.html"><img src="img/logo-default.png" alt="Logo" style="height:63px"></a></h3>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9">
+
+                <!-- Navigation starts.  -->
+                <div class="navy">
+                    <ul class="pull-right">
+                        
+
+
+                        <li class="">
+
+                        <a href="index.html">Home</a>
+
+                    </li><li class="">
+
+                        <a href="login.html" id='list_business'>List Business</a>
+
+                    </li><li class="">
+
+                        <a href="advance_search.html">Advanced Search</a>
+
+                  <li class="">
+
+                        <a href="#" class="dropdown-toggle myaccount" data-toggle="dropdown">My Account</a>
+<ul>
+<li class=" -child">
+<a href="show_listing.html">Edit Business Listing</a>
+</li>
+<li class=" -child">
+<a href="show_requirement.html">Edit Requirement</a>
+</li>
+</ul>
+
+                    </li>
+                    <li class="">
+                          <a class="post_requirement" id='post_requirement' href="requirement.html">Requirement</a>
+                        </li>
+                          <li class="">
+                          <a class="signup" id='signup'>Signup</a>
+                        </li>
+                         <li class="">
+                           <a class="signin" id="login">Signin</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- Navigation ends -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Main content starts -->
+<div class="main-block">
+    
+<!-- Container -->
+<div class="container">
+
+        <form class="form-horizontal" name='frmpost' id='frmpost'>
+        <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                <!-- Shopping items content -->
+                <div class="shopping-content">
+                    <div class="shopping-checkout">
+                        <!-- Heading -->
+                            <h4>Basic Info</h4>
+                            <hr>
+                            <div id="review-msg"></div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="inputEmail1">Category</label>
+                                <div class="col-md-8">
+                                    <select name="category" id='category' class="form-control">
+                                        <option value="">Select Category</option>
+                                                                                  
+                                                                            </select>
+                                                                    </div>
+                            </div>
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Phone</label>
+                            <div class="col-md-8">
+                                                                <input id="phone_no" type="text" name="phone_no" placeholder="Phone" value="" class="form-control">
+                                                            </div>
+                        </div>
+
+                        
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Email</label>
+                            <div class="col-md-8">
+                                                                <input id="email" type="text" name="email" placeholder="Email" value="" class="form-control">
+                                                            </div>
+                        </div>
+
+                     
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Website</label>
+                            <div class="col-md-8">
+                                                                <input id="website" type="text" name="website" placeholder="Website" value="" class="form-control">
+                                                            </div>
+                        </div>
+
+                     
+                            
+                            <h4>Address Info</h4>
+                            <hr>
+
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">State</label>
+                                <div class="col-md-8">
+                                    <select name="state" id="state" class="form-control" onchange="fetch_city()"><option value="">Select One</option></select>
+                                                                    </div>
+                            </div>
+                                                    <div class="form-group">
+                                <label class="col-md-3 control-label">City</label>
+                                <div class="col-md-8">
+                                                                        <input type="hidden" name="selected_city" id="selected_city" value="">
+                                                                        <select name="city" id="city" class="form-control"><option value="">Select One</option></select>
+                                                                                                        </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Zip Code</label>
+                                <div class="col-md-8">
+                                                                        <input type="text" name="zip_code"  id="zip_code" placeholder="Zip Code" value="" class="form-control">
+                                                                    </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Address</label>
+                                <div class="col-md-8">
+                                                                    <input id="address" type="text" name="address" placeholder="Address" value="" class="form-control">
+                                                                    </div>
+                            </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+
+                <h4>General Info</h4>
+                <hr>
+
+
+
+                            
+            
+                    
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Title</label>
+                            <div class="col-md-8">
+                                                                <input type="text" id="title" name="title" placeholder="Title" value="" class="form-control">
+                                                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Description</label>
+                            <div class="col-md-8">
+                            <textarea rows="5" name="description" class="form-control rich" id="description" aria-hidden="true" ></textarea>
+                                                            </div>
+                        </div>
+
+                    
+                   
+
+                            <div class="form-group">
+                    <label class="col-md-3 control-label">Tags</label>
+                    <div class="col-md-8">
+                                                <textarea rows="5" name="tags" id="tags" class="form-control tag-input"></textarea>
+                        <span>put as (,) comma sperated</span>
+                                            </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Featured Image</label>
+                    <div class="col-md-8">
+                        <div class="featured-img">
+                                                        <input type="hidden" name="featured_img" id="featured-img-input" value="">
+                           
+                           <input type='file' name='userfile' id='fileupload'>
+                                                    </div><br>
+
+                                                     <div id="progress" class="progress">
+                          <div class="progress-bar progress-bar-success"></div>
+                      </div>
+                    </div>
+                </div>
+
+                                <div class="form-group">
+                    <label class="col-md-3 control-label" style="padding:10px 0;">Selected Package</label>
+                    <div class="col-md-8">
+                                                <div class="clearfix" style="margin-top:5px;"></div>
+                    
+                        <div class="" style="padding:10px 0;font-weight:bold">
+                            Free<br>
+                            
+                        </div>
+                      
+                </div>
+                               
+            </div>
+
+        </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+                <div class="form-group" style="text-align:center">
+                    <button class="btn btn-color" id="btn_alert"  type="submit">Save</button>
+                    <button class="btn btn-default" type="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+<!-- Main content ends -->
+<!-- Footer Starts -->
+<br><br>
+<div class="footer navbar-fixed-bottom" style="background-color:black;color:white;" >
+    <!-- Container -->
+    <div class="container">
+        <!-- Footer Content -->
+            <!-- Paragraph -->
+            <center>
+            <p>UdyogMission 2016, all rights reserved <br> Developed by <a href="http://www.webmarts.in">Webmart </a> support@bramhodyogexpo.in </p>
+            </center>
+            
+            <div class="clearfix"></div>
+    </div>
+</div>
+
+</div>
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+
+<!--    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
+
+
+    <span class="totop" style="display: none;"><a href="#"><i class="fa fa-angle-up bg-color"></i></a></span>
+
+    <!-- Javascript files -->
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Placeholders JS -->
+   
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Owl carousel -->
+    
+  
+
+    <!-- Main JS -->
+   
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="js/jquery.iframe-transport.js"></script>
+    <script type="text/javascript" src="js/jquery.fileupload.js"></script>
+      
+
+<script type="text/javascript">
+
+$(function () {
+
+ 
+ 'use strict';
+        // Change this to the location of your server-side upload handler:
+        var url = window.location.hostname === 'blueimp.github.io' ?
+                                    '//jquery-file-upload.appspot.com/' : 'http://www.bramhodyogexpo.in/UdyogMission/index.php/home/do_upload';
+               
+        $('#fileupload').fileupload({
+            url: url,
+            dataType: 'json',
+           
+            
+            fail: function(e,data){
+            
+            },
+            done: function (e, data) {
+                console.log(data)
+                $.each(data.result.files, function (index, file) {
+
+                 $('#featured-img-input').val(file.name)
+                 alert("Image uploaded")
+                 
+                });
+            },
+            progressall: function (e, data) {
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+                $('#progress .progress-bar').css(
+                    'width',
+                    progress + '%'
+                );
+            }
+        }).prop('disabled', !$.support.fileInput)
+            .parent().addClass($.support.fileInput ? undefined : 'disabled');
+    });   
+  
+
+ 
+$(document).ready(function(){
+
+var user = window.localStorage["username"];
+
+    
+    
+    if(user=="" || !user)
+    {
+       $('#list_business').attr('href','login.html');
+        $('#login').addClass('signin');
+         $('#login').removeAttr('href');
+         $('#login').html('Signin')
+         document.location.href='index.html';
+           $('#post_requirement').hide();
+         $('#signup').show();
+         $('.myaccount').hide();
+    }
+    else
+    {
+          $('#post_requirement').show();
+         $('#signup').hide();
+        $('#list_business').attr('href','subscribe.html');
+        $('#login').removeClass('signin');
+        $('#login').attr('href','logout.html');
+        $('#login').html('Logout')
+        $('.myaccount').show();
+    }
+
+$('[type="file"]').ezdz({
+            text: 'select a picture',
+            // validators: {
+            //     maxWidth:  600,
+            //     maxHeight: 400
+            // },
+
+        
+            reject: function(file, errors) {
+               
+            }
+        });
+ 
+
+$('[type="file"]').ezdz('preview', 'http://www.bramhodyogexpo.in/UdyogMission/uploads/thumbs/no-image.png');
+
+
+
+     window.localStorage['plainkey']='';
+      window.localStorage['city']='';
+       window.localStorage['category']='';
+        window.localStorage['sort_by']='';
+
+    
+fetch_all_category();
+fetch_state()
+
+
+
+$("#frmsingup").submit(function(e){
+      e.preventDefault()
+    flag=true;
+    $("#frmsingup input").removeClass("text-danger")
+            if(flag==true && $("#fname").val()=="")
+           {
+               $("#fname").addClass('text-danger')
+               alert('Please Enter First Name')
+               
+               $("#fname").focus()
+               flag=false;
+           }
+           
+           if(flag==true && $("#lname").val()=="")
+           {
+               $("#lname").addClass('text-danger')
+               alert('Please Enter Last Name')
+               $("#lname").focus()
+               flag=false;
+           }
+
+               if(flag==true && $("#email").val()=="")
+           {
+               $("#email").addClass('text-danger')
+               alert('Please Enter Email')
+               $("#email").focus()
+               flag=false;
+           }
+
+           if(flag==true && $("#uname").val()=="")
+           {
+               $("#uname").addClass('text-danger')
+               alert('Please Enter Username')
+               $("#uname").focus()
+               flag=false;
+           }
+
+           if(flag==true && $("#password").val()=="")
+           {
+               $("#password").addClass('text-danger')
+               alert('Please Enter Password')
+               $("#password").focus()
+               flag=false;
+           }
+
+           if(flag==true && $("#repassword").val()=="")
+           {
+               $("#repassword").addClass('text-danger')
+               alert('Please Enter Confirm Password')
+               $("#repassword").focus()
+               flag=false;
+           }
+
+           
+            
+
+            if (flag==true && ($("#password").val() != $("#repassword").val()))
+
+               { 
+                   alert("Passwords do not match."); 
+                   flag=false;
+               }
+
+/*
+            if(flag==true && (!$("#terms_conditon_field").prop('checked')))
+           {
+            alert("Please Check Terms and Condition");
+            flag=false;
+            }*/
+            
+
+            if (flag==true)
+            {
+                console.log("start")
+                var senddata = $("#frmsingup").serialize()
+                console.log(senddata)
+                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/register",senddata)
+                .done(function(data){
+                     try{
+                        var jsondata = $.parseJSON(data)
+                        console.log(jsondata)
+                        if(jsondata.status=='true')
+                        {
+                          $("#fname").val('')
+                          $("#lname").val('')
+                          $("#email").val('')
+                          $("#password").val('')
+                          $("#repassword").val('')
+                        //  alert('Thank you for registration')
+                          $('#review-msg').html('<div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Thank you for registration. </div>') 
+                            window.localStorage["username"] = jsondata.email;
+                            window.localStorage["id"] = jsondata.userid;  
+                            document.location.href="subscribe.html"; 
+                        }
+                        else
+                        {
+                            
+                           alert(jsondata.reason);
+                        }
+                     }
+                     catch(e){}
+
+                })
+                .fail(function(){
+                    console.log("fail");
+                })
+
+            }
+            else
+            {
+                $("#regmsg").html("  Please Fill The all form ")
+            }
+
+    
+    })
+
+$("#frmlogin").submit(function(e){
+      e.preventDefault()
+    flag=true;
+    $("#frmlogin input").removeClass("text-danger")
+             if(flag==true && $("#email1").val()=="")
+           {
+               $("#email1").addClass('text-danger')
+               alert('Please Enter Email')
+               
+               $("#email1").focus()
+               flag=false;
+           }
+           
+           if(flag==true && $("#pwd1").val()=="")
+           {
+               $("#pwd1").addClass('text-danger')
+               alert('Please Enter Password')
+               $("#pwd1").focus()
+               flag=false;
+           }
+            if (flag==true)
+            {
+                console.log("start")
+                var senddata = $("#frmlogin").serialize()
+                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/login",senddata)
+                .done(function(data){
+                     try{
+                        var jsondata = $.parseJSON(data)
+                        console.log(jsondata)
+                        if(jsondata.status=='true')
+                        {
+                                
+                         
+                            window.localStorage["username"] = jsondata.email;
+                            window.localStorage["id"] = jsondata.userid;  
+                            document.location.href="subscribe.html";   
+                            /*location.reload();*/
+                        }
+                        else
+                        {
+                            
+                           alert(jsondata.reason);
+                        }
+                     }
+                     catch(e){}
+
+                })
+                .fail(function(){
+                    console.log("fail");
+                })
+
+            }
+            else
+            {
+                $("#regmsg").html("  Please Fill The all form ")
+            }
+
+    
+    })
+
+$("#frmpost").submit(function(e){
+      e.preventDefault()
+    flag=true;
+    var category=$('#category').val();
+            var phone_no=$('#phone_no').val();
+            var email=$('#email').val();
+            var website=$('#website').val();
+            
+            
+            
+            var state=$('#state').val();
+            var city=$('#city').val();
+            var zip_code=$('#zip_code').val();
+            var address=$('#address').val();
+            var title=$('#title').val();
+            var description=$('#description').val();
+            var tags=$('#tags').val();
+            var featured_img=$('#featured-img-input').val();
+            var user_id=window.localStorage['id'];
+
+           /* if($("#category").val()=="")
+          {
+              $("#category").addClass('text-danger')
+              alert('Please Enter Category')
+              
+              $("#category").focus()
+              flag=false;
+          }
+          */
+          if($("#phone_no").val()=="")
+          {
+              $("#phone_no").addClass('text-danger')
+              alert('Please Enter Phone No')
+              $("#phone_no").focus()
+              flag=false;
+          }
+
+           if($("#email").val()=="")
+          {
+              $("#email").addClass('text-danger')
+              alert('Please Enter Email')
+              $("#email").focus()
+              flag=false;
+          }
+
+        
+
+
+           /*if($("#website").val()=="")
+          {
+              $("#website").addClass('text-danger')
+              alert('Please Enter Website')
+              $("#website").focus()
+              flag=false;
+          }
+
+
+
+          
+
+
+            if($("#zip_code").val()=="")
+          {
+              $("#zip_code").addClass('text-danger')
+              alert('Please Enter Zip Code')
+              $("#zip_code").focus()
+              flag=false;
+          }*/
+        if($("#state").val()=="")
+          {
+              $("#state").addClass('text-danger')
+              alert('Please Enter State')
+              $("#state").focus()
+              flag=false;
+          }
+
+            if($("#city").val()=="")
+          {
+              $("#city").addClass('text-danger')
+              alert('Please Enter City')
+              $("#city").focus()
+              flag=false;
+          }
+
+           if($("#address").val()=="")
+          {
+              $("#address").addClass('text-danger')
+              alert('Please Enter Address')
+              $("#address").focus()
+              flag=false;
+          }
+           if($("#title").val()=="")
+          {
+              $("#title").addClass('text-danger')
+              alert('Please Enter Title')
+              $("#title").focus()
+              flag=false;
+          }
+
+
+
+/*           
+           if($("#description").val()=="")
+          {
+              $("#description").addClass('text-danger')
+              alert('Please Enter Description')
+              $("#description").focus()
+              flag=false;
+          }
+
+
+            if($("#tags").val()=="")
+          {
+              $("#tags").addClass('text-danger')
+              alert('Please Enter Tags')
+              $("#tags").focus()
+              flag=false;
+          }
+*/
+
+         if (flag==true)
+            {
+                console.log("start")
+                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/create_ad",
+            {
+                user_id:user_id,
+                category:category,
+                phone_no:phone_no,
+                email:email,
+                website:website,
+                state:state,
+                city:city,
+                zip_code:zip_code,
+                address:address,
+                title:title,
+                description:description,
+                tags:tags,
+               featured_img :featured_img,
+                user_id:user_id
+            },
+            function(data, status){
+                    var jsondata = $.parseJSON(data)
+                                console.log(jsondata)
+                                if(jsondata.status=='true')
+                                {
+                                      /*$('#category').val('');
+                                       $('#phone_no').val('');
+                                       $('#email').val('');
+                                        $('#website').val('');
+                                       $('#founded').val('');
+                                       $('#price_range').val('');
+
+                                       $('#country').val('');
+                                       $('#state').val('');
+                                       $('#city').val('');
+                                       $('#zip_code').val('');
+                                       $('#address').val('');
+                                       $('#title').val('');
+                                       $('#description').val('');
+                                       $('#tags').val('');
+                                       $('#latitude').val('');
+                                       $('#longitude').val('');
+
+*/
+
+                                       
+                              swal("You post is posted") 
+                              window.location.href='advance_search.html';
+                                }
+                })
+        }
+    })
+
+}); 
+
+     function fetch_all_category()
+        {
+
+         var html='<option value="any">Any Category</option>'
+
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_categories",
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+             
+              $.each(obj, function(key,val) {
+                if(val.parent!=0)
+                var title='--'+val.title
+                else
+                var title=val.title
+
+              html+='<option value='+val.id+'>'+title+'</option>'
+              
+
+             
+                })
+             $('#category').append(html);
+             
+          });
+
+        }
+
+       
+       function fetch_state()
+        {
+            
+
+         var html='';
+
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_state",
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+             
+              $.each(obj, function(key,val) {
+               
+
+              html+='<option value='+val.id+' >'+val.name+'</option>'
+              
+
+             
+                })
+             $('#state').append(html);
+             
+          });
+
+        }
+
+
+
+            function fetch_city()
+        {
+            var val=$("#state").val();
+
+         var html='';
+
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_city/"+val,
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+             
+              $.each(obj, function(key,val) {
+               
+
+              html+='<option value='+val.id+' >'+val.name+'</option>'
+              
+
+             
+                })
+             $('#city').append(html);
+             
+          });
+
+        }
+   
+       
+
+        function fetch_child_category(val)
+        {
+
+        
+
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_child_categories/"+val,
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+              console.log(obj)
+              $.each(obj, function(key,val) {
+                var html="<a><li>"+val.title+"("+val.count+")</li></a>";
+                $('.parent_ul[ul-id='+val.parent+']').append(html);
+                })
+
+          });
+
+        }
+
+
+        
+
+</script>
+
+<div id="signin-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                    <h4 class="modal-title" id="myModalLabel">Login to your Account </h4>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Login starts -->
+                    <div class="well login-reg-form">
+
+                        <!-- Form -->
+                        <form  class="form-horizontal" role="form" id='frmlogin' name='frmlogin'>
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <!-- Label -->
+                                <label for="user" class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-9">
+                                    <!-- Input -->
+                                    <input type="text" class="form-control" id="email1" name="useremail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-sm-3 control-label">Password</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" id="pwd1" name="password" placeholder="Password">
+                                </div>
+                            </div>
+                                                        <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Remember Me                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <!-- Button -->
+                                    <button type="submit" class="btn btn-red">Login</button>&nbsp;
+                                    <button type="reset" class="btn btn-white">Reset</button>
+                                </div>
+                            </div>
+                            <div class="col-sm-offset-3 col-sm-9">
+                             <title>UdyogMission       | List Business</title>
+                                                            </div>
+                        </form>
+                        <br>
+                                            </div>
+                    <!-- Login ends -->
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+
+            <!-- /.modal-content -->
+
+        </div>
+
+        <!-- /.modal-dialog -->
+
+    </div>
+
+
+
+

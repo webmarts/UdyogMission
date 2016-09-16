@@ -1,0 +1,384 @@
+
+      
+    <!-- Styles -->
+    <!-- Bootstrap CSS -->
+   
+
+ <style type="text/css">
+@import url("main.css");
+ </style>   
+
+    
+
+
+<body class="home" dir="ltr" id="dummybodyid">
+
+<!-- Outer Starts -->
+<div id="header">
+<!-- Top bar starts -->
+
+</div>
+
+
+
+
+<!-- Main content starts -->
+<div class="main-block">
+   <div class="page-heading-two">
+        <div class="container">
+            <h2>Deepak Puree </h2>
+            <div class="breads">
+                <a href="http://whizbiz.webhelios.com/index.php/en">Home</a> / <a href="http://whizbiz.webhelios.com/index.php/en/users">All Users</a> / Deepak Puree            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-9 col-sm-12 col-xs-12">
+            <div class="agent-holder clearfix">
+                <!-- Team #2 -->
+                <div class="team-two">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12" style="width: 100%">
+                            <!-- Team #2 member -->
+                           <div class="team-member well">
+                                <!-- Image -->
+                                <a href="http://whizbiz.webhelios.com/index.php/en/profile/111/Deepak Puree">
+                                <img class="img-responsive" src="http://whizbiz.webhelios.com/uploads/profile_photos/nophoto-male.jpg" alt="">
+
+                                </a>
+                                <div class="team-details">
+                                    <!-- Name -->
+                                    <h4>Deepak Puree</h4>
+                                                                                                            <p class="contact-types">
+                                                                                <strong>Phone:</strong>  <br>
+                                                                                                                        <strong>Email:</strong> <a href="mailto:rinkucrushaders@gmail.com">rinkucrushaders@gmail.com</a>
+                                                                            </p>
+                                    <!-- Social -->
+                              </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Team #2 end -->
+            </div>
+
+            <div class="block-heading-two">
+                <h3><span><i class="fa fa-user"></i> Posts By : Deepak Puree (0)</span>
+                    <div class="pull-right list-switcher">
+                        <a target="recent-posts" href="http://whizbiz.webhelios.com/index.php/en/show/memberposts_ajax/6/grid/111" class="selected"><i class="fa fa-th "></i></a>
+                        <a target="recent-posts" href="http://whizbiz.webhelios.com/index.php/en/show/memberposts_ajax/6/list/111"><i class="fa fa-th-list "></i></a>
+                    </div>
+                </h3>   
+            </div>
+            <span class="recent-posts"><div class="clearfix"></div><div class="img-box-4 text-center">
+    <div class="alert alert-info">No Posts</div></div>
+<div class="clearfix"></div>
+</span>
+            <div class="ajax-loading recent-loading" style="display: none;"><img src="http://whizbiz.webhelios.com/application/modules/themes/views/default/img/loading.gif" alt="loading..."></div>
+            <a href="" class="load-more-recent btn btn-blue" style="width: 100%; display: none;">Load More</a>
+
+            <script type="text/javascript">
+            var per_page = '6';
+            var recent_count = '6';
+
+            jQuery(document).ready(function(){
+                jQuery('.list-switcher a').click(function(e){
+                    jQuery('.list-switcher a').removeClass('selected');
+                    jQuery(this).addClass('selected');
+                    e.preventDefault();
+                    var target = jQuery(this).attr('target');
+                    var loadUrl = jQuery(this).attr('href');
+                    jQuery('.recent-loading').show();
+                    jQuery.post(
+                        loadUrl,
+                        {},
+                        function(responseText){
+                            jQuery('.'+target).html(responseText);
+                            jQuery('.recent-loading').hide();
+                            if(jQuery('.recent-posts > div').children().length<recent_count)
+                            {
+                                jQuery('.load-more-recent').hide();
+                            }
+                            fix_grid_height();
+                        }
+                    );
+                });
+
+                jQuery('.load-more-recent').click(function(e){
+                        e.preventDefault();
+                        var next = parseInt(recent_count)+parseInt(per_page);
+                        jQuery('.list-switcher a').each(function(){
+                            var url = jQuery(this).attr('href');
+                            url = url.replace('/'+recent_count+'/','/'+next+'/');
+                            jQuery(this).attr('href',url);
+                        });
+                        recent_count = next;
+                        jQuery('.list-switcher > .selected').trigger('click');
+                    });
+            });
+            </script>
+        </div>
+
+
+        <div class="col-md-3 col-sm-12 col-xs-12">
+            <div class="sidebar">
+                <!-- Search Widget -->
+<div class="s-widget">
+    <!-- Heading -->
+    <h5><i class="fa fa-search color"></i>&nbsp; Search</h5>
+    <!-- Widgets Content -->
+    <div class="widget-content search">
+        <form role="form" action="http://whizbiz.webhelios.com/index.php/en/show/advfilter" method="post">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Type something" value="" name="plainkey">
+
+
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-color">Search</button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Main content ends -->
+<!-- Footer Starts -->
+<footer>
+    <!-- Container -->
+    <div class="container">
+        <!-- Footer Content -->
+            <!-- Paragraph -->
+            <p class="pull-left">UdyogMission 2016, all rights reserved <br> Developed by <a href="http://www.webmarts.in">Webmart </a> support@bramhodyogexpo.in </p>
+            
+            <div class="clearfix"></div>
+    </div>
+</footer>
+
+
+</div>
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+
+<!--    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
+
+
+    <span class="totop" style="display: none;"><a href="#"><i class="fa fa-angle-up bg-color"></i></a></span>
+
+    <!-- Javascript files -->
+
+    <!-- Bootstrap JS -->
+     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Placeholders JS -->
+   
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Owl carousel -->
+   
+ <script src="js/jquery-2.1.1.min.js"></script>
+
+    
+
+
+
+
+
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+
+    jQuery('.signin').click(function(e){
+        e.preventDefault();
+        jQuery('#signin-modal').modal('show');
+    });
+
+    // jQuery(window).resize(function(){
+    //    console.log(jQuery(window).width()); 
+    // });
+});
+</script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+     window.localStorage['plainkey']='';
+      window.localStorage['city']='';
+       window.localStorage['category']='';
+        window.localStorage['sort_by']='';
+
+        var user = window.localStorage["username"];
+
+    
+    
+    if(user=="" || !user)
+    {
+       $('#list_business').attr('href','login.html');
+        $('#login').addClass('signin');
+         $('#login').removeAttr('href');
+         $('#login').html('Signin')
+         document.location.href='index.html';
+    }
+    else
+    {
+        $('#list_business').attr('href','subscribe.html');
+        $('#login').removeClass('signin');
+        $('#login').attr('href','logout.html');
+        $('#login').html('Logout')
+    }
+    
+$("#frmlogin").submit(function(e){
+      e.preventDefault()
+    flag=true;
+    $("#frmlogin input").removeClass("text-danger")
+            if(flag==true && $("#email1").val()=="")
+           {
+               $("#email1").addClass('text-danger')
+               alert('Please Enter Email')
+               
+               $("#email1").focus()
+               flag=false;
+           }
+           
+           if(flag==true && $("#pwd1").val()=="")
+           {
+               $("#pwd1").addClass('text-danger')
+               alert('Please Enter Password')
+               $("#pwd1").focus()
+               flag=false;
+           }
+            
+            if (flag==true)
+            {
+                console.log("start")
+                var senddata = $("#frmlogin").serialize()
+                $.post("http://localhost:8080/UdyogMission/index.php/login",senddata)
+                .done(function(data){
+                     try{
+                        var jsondata = $.parseJSON(data)
+                        console.log(jsondata)
+                        if(jsondata.status=='true')
+                        {
+                                
+                         
+                            window.localStorage["username"] = jsondata.email;
+                            window.localStorage["id"] = jsondata.userid;     
+                            /*location.reload();*/
+                        }
+                        else
+                        {
+                            
+                           alert(jsondata.reason);
+                        }
+                     }
+                     catch(e){}
+
+                })
+                .fail(function(){
+                    console.log("fail");
+                })
+
+            }
+            else
+            {
+                $("#regmsg").html("  Please Fill The all form ")
+            }
+
+    
+    })
+ 
+}); 
+
+     
+     
+</script>
+
+    <div id="signin-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                    <h4 class="modal-title" id="myModalLabel">Login to your Account </h4>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Login starts -->
+                    <div class="well login-reg-form">
+
+                        <!-- Form -->
+                        <form name="frmlogin" id="frmlogin" class="form-horizontal" role="form" >
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <!-- Label -->
+                                <label for="user" class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-9">
+                                    <!-- Input -->
+                                    <input type="text" class="form-control" id="email1" name="useremail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-sm-3 control-label">Password</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" id="pwd1" name="password" placeholder="Password">
+                                </div>
+                            </div>
+                                                        <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Remember Me                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <!-- Button -->
+                                    <button type="submit" class="btn btn-red">Login</button>&nbsp;
+                                    <button type="reset" class="btn btn-white">Reset</button>
+                                </div>
+                            </div>
+                            <div class="col-sm-offset-3 col-sm-9">
+                             <title>UdyogMission       | List Business</title>
+                                                            </div>
+                        </form>
+                        <br>
+                                            </div>
+                    <!-- Login ends -->
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+
+            <!-- /.modal-content -->
+
+        </div>
+
+        <!-- /.modal-dialog -->
+
+    </div>
+
+
+   

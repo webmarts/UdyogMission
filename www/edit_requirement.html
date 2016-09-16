@@ -1,0 +1,874 @@
+<html lang="en"><head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+
+    
+    
+    <title>UdyogMission       | List Business</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Airport,Cafe,cinemas,hotels,resots.libraries,night clubs,business classified,easy,cms,installation,best">
+
+    <meta name="keywords" content="Airport,Cafe,cinemas,hotels,resots.libraries,night clubs,business classified,easy,cms,installation,best">
+
+    <meta name="revisit-after" content="3 days">
+
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <link rel="stylesheet" href="css/jquery.ezdz.min.css">
+      
+    <script src="js/jquery-2.1.1.min.js"></script>
+
+    <script src="js/jquery.ezdz.min.js"></script>
+ <script src="dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+     <script src="js/main.js"></script>
+    <!-- Styles -->
+    <!-- Bootstrap CSS -->
+    <style type="text/css">
+@import url("main.css");
+</style>
+    
+
+<style>
+    .top-bar{
+        background: #fdfdfd; 
+    }
+    
+    .header-2{
+        background: #ffffff; 
+    }
+    .header-2 .navy > ul > li > ul{
+        background: #ffffff; 
+        
+    }
+    .header-2 .navy > ul > li > a{
+        color: #666    }
+    .header-2 .navy ul ul li a{
+        color: #666        
+    }
+   .header-2 .navy > ul > li > a:hover{
+        color: #32c8de    }
+    .header-2 .navy ul ul li a:hover{
+        color: #32c8de        
+    }
+    .header-2 .navy > ul > .active > a{
+        color: #32c8de    }
+    .header-2 .navy ul ul .active a{
+        color: #32c8de        
+    }
+
+    .real-estate .re-big-form{
+        padding: 15px 0 0 0;
+                background: #9fee9b;        
+            }
+</style>
+
+
+<body class="home" dir="ltr" id="dummybodyid">
+
+<div class="outer">
+<!-- Top bar starts -->
+<div class="top-bar">
+    <div class="container">
+
+        <!-- Contact starts -->
+        
+        <!-- Contact ends -->
+        
+
+       
+
+        <!-- Search section for responsive design -->
+        <!--div class="tb-search pull-left">
+            <a href="#" class="b-dropdown"><i class="fa fa-search square-2 rounded-1 bg-color white"></i></a>
+            <div class="b-dropdown-block">
+                <form role="form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Type Something">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-color" type="button">Search</button>
+                                    </span>
+                    </div>
+                </form>
+            </div>
+        </div-->
+        <!-- Search section ends -->
+
+        <!-- Social media starts -->
+        
+        <!-- Social media ends -->
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<!-- Top bar ends -->
+<!-- Header two Starts -->
+<div class="header-2">
+
+    <!-- Container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <!-- Logo section -->
+                <div class="logo">
+                    <h3><a href="index.html"><img src="img/logo-default.png" alt="Logo" style="height:63px"></a></h3>
+                </div>
+            </div>
+
+
+            <div class="col-md-9 col-sm-9">
+
+                <!-- Navigation starts.  -->
+                <div class="navy">
+                    <ul class="pull-right">
+                        
+
+
+                        <li class="">
+
+                        <a href="index.html">Home</a>
+
+                    </li><li class="">
+
+                        <a href="login.html" id='list_business'>List Business</a>
+
+                    </li><li class="">
+
+                        <a href="advance_search.html">Advanced Search</a>
+                        </li>
+                          <li class="">
+
+                        <a href="#" class="dropdown-toggle myaccount" data-toggle="dropdown">My Account</a>
+<ul>
+<li class=" -child">
+<a href="show_listing.html">Edit Business Listing</a>
+</li>
+<li class=" -child">
+<a href="show_requirement.html">Edit Requirement</a>
+</li>
+</ul>
+
+                    </li>
+                       <li class="">
+                          <a class="post_requirement" id='post_requirement' href="requirement.html">Requirement</a>
+                        </li>
+                          <li class="">
+                          <a class="signup" id='signup'>Signup</a>
+                        </li>
+                         <li class="">
+                           <a class="signin" id="login">Signin</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- Navigation ends -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Main content starts -->
+<div class="main-block">
+    <!-- Page heading two starts -->
+    
+
+<!-- Container -->
+<div class="container">
+
+        <form class="form-horizontal" name='frmpost' id='frmpost'>
+        <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                <!-- Shopping items content -->
+                <div class="shopping-content">
+                    <div class="shopping-checkout">
+                        <!-- Heading   <h4>Basic Info</h4>-->
+                          
+                            <hr>
+                            <div id="review-msg"></div>
+
+                             <div class="form-group">
+                                <label class="col-md-3 control-label" for="inputEmail1">Category</label>
+                                <div class="col-md-8">
+                                    <select name="category" id='category' class="form-control">
+                                        <option value="">Select Category</option>
+                                                                                  
+                                                                            </select>
+                                                                    </div>
+                            </div>
+
+
+                            <div class="form-group">
+                            <label class="col-md-3 control-label">Title</label>
+                            <div class="col-md-8">
+                                                                <input type="text" id="title" name="title" placeholder="Title" value="" class="form-control">
+                                                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Description</label>
+                            <div class="col-md-8">
+                            <textarea rows="5" name="description" class="form-control" id="description" aria-hidden="true" ></textarea>
+                                                            </div>
+                        </div>
+
+
+                      
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">State</label>
+                                <div class="col-md-8">
+                                    <select name="state" id="state" class="form-control" onchange="fetch_city()"><option value="">Select One</option></select>
+                                                                    </div>
+                            </div>
+                                                    <div class="form-group">
+                                <label class="col-md-3 control-label">City</label>
+                                <div class="col-md-8">
+                                                                        <input type="hidden" name="selected_city" id="selected_city" value="">
+                                                                        <select name="city" id="city" class="form-control"><option value="">Select One</option></select>
+                                                                                                        </div>
+                            </div>
+                            <div class="form-group">
+                            <label class="col-md-3 control-label">Email</label>
+                            <div class="col-md-8">
+                                                                <input id="email" type="text" name="email" placeholder="Email" value="" class="form-control">
+                                                            </div>
+                        </div>
+
+                          <div class="form-group">
+                            <label class="col-md-3 control-label">Phone</label>
+                            <div class="col-md-8">
+                                                                <input id="phone_no" type="text" name="phone_no" placeholder="Phone" value="" class="form-control">
+                                                            </div>
+                        </div>
+                           
+
+                        
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+                <div class="form-group" style="text-align:center">
+                    <button class="btn btn-color" type="submit">Update</button>
+                    <button class="btn btn-default" type="reset">Reset</button><br><br>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+</div>
+<br>
+<br>
+<div class="footer navbar-fixed-bottom" style="background-color:black;color:white;" >
+    <!-- Container -->
+    <div class="container">
+        <!-- Footer Content -->
+            <!-- Paragraph -->
+            <center>
+            <p>UdyogMission 2016, all rights reserved | Developed by <a href="http://www.webmarts.in">Webmart </a> support@bramhodyogexpo.in </p>
+            </center>
+            
+            <div class="clearfix"></div>
+    </div>
+</div>
+
+
+
+
+</div>
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+
+<!--    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
+
+
+    <span class="totop" style="display: none;"><a href="#"><i class="fa fa-angle-up bg-color"></i></a></span>
+
+    <!-- Javascript files -->
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  
+<script type="text/javascript">
+
+  
+  
+
+ 
+$(document).ready(function(){
+
+var user = window.localStorage["username"];
+
+    
+    
+    if(user=="" || !user)
+    {
+       $('#list_business').attr('href','login.html');
+        $('#login').addClass('signin');
+         $('#login').removeAttr('href');
+         $('#login').html('Signin')
+         $('#post_requirement').hide();
+         $('#signup').show();
+         document.location.href='index.html';
+         $('.myaccount').hide();
+    }
+    else
+    {
+          $('#post_requirement').show();
+         $('#signup').hide();
+        $('#list_business').attr('href','subscribe.html');
+        $('#email').val(user);
+        $('#login').removeClass('signin');
+        $('#login').attr('href','logout.html');
+        $('#login').html('Logout')
+        $('.myaccount').show();
+    }
+
+ 
+
+
+
+
+
+
+     window.localStorage['plainkey']='';
+      window.localStorage['city']='';
+       window.localStorage['category']='';
+        window.localStorage['sort_by']='';
+
+    
+fetch_all_category();
+fetch_state()
+
+ 
+ var url = location.href;
+     
+     var dataxx = url.split("?");
+    
+     var datayy = dataxx[1].split("=");
+     
+     var post_id = datayy[1];
+
+
+      $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_requirement_by_id",
+    {
+        id:post_id
+    },
+    function(data, status){
+         var arraydata = JSON.parse(data);
+         var obj=arraydata[0];
+        console.log(obj)
+        $('#title').val(obj.title)
+        $('#description').val(obj.description)
+        $('#phone_no').val(obj.phone_no)
+        $('#email').val(obj.email)
+        $('#website').val(obj.website)
+        $('#state').val(obj.state)
+        $('#category').val(obj.category)
+           
+        fetch_city(obj.city);
+ })
+
+
+
+$("#frmlogin").submit(function(e){
+      e.preventDefault()
+    flag=true;
+    $("#frmlogin input").removeClass("text-danger")
+             if(flag==true && $("#email1").val()=="")
+           {
+               $("#email1").addClass('text-danger')
+               alert('Please Enter Email')
+               
+               $("#email1").focus()
+               flag=false;
+           }
+           
+           if(flag==true && $("#pwd1").val()=="")
+           {
+               $("#pwd1").addClass('text-danger')
+               alert('Please Enter Password')
+               $("#pwd1").focus()
+               flag=false;
+           }
+            if (flag==true)
+            {
+                console.log("start")
+                var senddata = $("#frmlogin").serialize()
+                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/login",senddata)
+                .done(function(data){
+                     try{
+                        var jsondata = $.parseJSON(data)
+                        console.log(jsondata)
+                        if(jsondata.status=='true')
+                        {
+                                
+                         
+                            window.localStorage["username"] = jsondata.email;
+                            window.localStorage["id"] = jsondata.userid;  
+                            document.location.href="subscribe.html";   
+                            /*location.reload();*/
+                        }
+                        else
+                        {
+                            
+                           alert(jsondata.reason);
+                        }
+                     }
+                     catch(e){}
+
+                })
+                .fail(function(){
+                    console.log("fail");
+                })
+
+            }
+            else
+            {
+                $("#regmsg").html("  Please Fill The all form ")
+            }
+
+    
+    })
+
+$("#frmsingup").submit(function(e){
+      e.preventDefault()
+    flag=true;
+    $("#frmsingup input").removeClass("text-danger")
+            if(flag==true && $("#fname").val()=="")
+           {
+               $("#fname").addClass('text-danger')
+               alert('Please Enter First Name')
+               
+               $("#fname").focus()
+               flag=false;
+           }
+           
+           if(flag==true && $("#lname").val()=="")
+           {
+               $("#lname").addClass('text-danger')
+               alert('Please Enter Last Name')
+               $("#lname").focus()
+               flag=false;
+           }
+
+               if(flag==true && $("#email").val()=="")
+           {
+               $("#email").addClass('text-danger')
+               alert('Please Enter Email')
+               $("#email").focus()
+               flag=false;
+           }
+
+           if(flag==true && $("#uname").val()=="")
+           {
+               $("#uname").addClass('text-danger')
+               alert('Please Enter Username')
+               $("#uname").focus()
+               flag=false;
+           }
+
+           if(flag==true && $("#password").val()=="")
+           {
+               $("#password").addClass('text-danger')
+               alert('Please Enter Password')
+               $("#password").focus()
+               flag=false;
+           }
+
+           if(flag==true && $("#repassword").val()=="")
+           {
+               $("#repassword").addClass('text-danger')
+               alert('Please Enter Confirm Password')
+               $("#repassword").focus()
+               flag=false;
+           }
+
+           
+            
+
+            if (flag==true && ($("#password").val() != $("#repassword").val()))
+
+               { 
+                   alert("Passwords do not match."); 
+                   flag=false;
+               }
+
+/*
+            if(flag==true && (!$("#terms_conditon_field").prop('checked')))
+           {
+            alert("Please Check Terms and Condition");
+            flag=false;
+            }*/
+            
+
+            if (flag==true)
+            {
+                console.log("start")
+                var senddata = $("#frmsingup").serialize()
+                console.log(senddata)
+                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/register",senddata)
+                .done(function(data){
+                     try{
+                        var jsondata = $.parseJSON(data)
+                        console.log(jsondata)
+                        if(jsondata.status=='true')
+                        {
+                          $("#fname").val('')
+                          $("#lname").val('')
+                          $("#email").val('')
+                          $("#password").val('')
+                          $("#repassword").val('')
+                        //  alert('Thank you for registration')
+                          $('#review-msg').html('<div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Thank you for registration. </div>') 
+                            window.localStorage["username"] = jsondata.email;
+                            window.localStorage["id"] = jsondata.userid;  
+                            document.location.href="subscribe.html"; 
+                        }
+                        else
+                        {
+                            
+                           alert(jsondata.reason);
+                        }
+                     }
+                     catch(e){}
+
+                })
+                .fail(function(){
+                    console.log("fail");
+                })
+
+            }
+            else
+            {
+                $("#regmsg").html("  Please Fill The all form ")
+            }
+
+    
+    })
+
+$("#frmpost").submit(function(e){
+      e.preventDefault()
+    flag=true;
+           var category=$('#category').val();
+            var phone_no=$('#phone_no').val();
+            var email=$('#email').val();
+            var state=$('#state').val();
+            var city=$('#city').val();
+            var title=$('#title').val();
+            var description=$('#description').val();
+            var user_id=window.localStorage['id'];
+
+            if($("#category").val()=="")
+          {
+              $("#category").addClass('text-danger')
+              alert('Please Enter Category')
+              
+              $("#category").focus()
+              flag=false;
+          }
+          
+            if($("#title").val()=="")
+          {
+              $("#title").addClass('text-danger')
+              alert('Please Enter Title')
+              $("#title").focus()
+              flag=false;
+          }
+
+           if($("#description").val()=="")
+          {
+              $("#description").addClass('text-danger')
+              alert('Please Enter Description')
+              $("#description").focus()
+              flag=false;
+          }
+
+
+          if($("#phone_no").val()=="")
+          {
+              $("#phone_no").addClass('text-danger')
+              alert('Please Enter Phone No')
+              $("#phone_no").focus()
+              flag=false;
+          }
+
+           if($("#email").val()=="")
+          {
+              $("#email").addClass('text-danger')
+              alert('Please Enter Email')
+              $("#email").focus()
+              flag=false;
+          }
+
+        
+
+
+            if($("#state").val()=="")
+          {
+              $("#state").addClass('text-danger')
+              alert('Please Enter State')
+              $("#state").focus()
+              flag=false;
+          }
+
+            if($("#city").val()=="")
+          {
+              $("#city").addClass('text-danger')
+              alert('Please Enter City')
+              $("#city").focus()
+              flag=false;
+          }
+
+
+
+          
+            
+         if (flag==true)
+            {
+                console.log("start")
+                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/update_requirement",
+            {
+                user_id:user_id,
+                category:category,
+                phone_no:phone_no,
+                email:email,
+                state:state,
+                city:city,
+                title:title,
+                description:description,
+                id:post_id
+            },
+            function(data, status){
+                    var jsondata = $.parseJSON(data)
+                                console.log(jsondata)
+                                if(jsondata.status=='true')
+                                {
+                                   //    $('#category').val('');
+                                   //     $('#phone_no').val('');
+                                   //     /*$('#email').val('');*/
+                                   //     $('#state').val('');
+                                   //     $('#city').val('');
+                                   //     $('#title').val('');
+                                   //     $('#description').val('');
+                                      
+                                   // $('#review-msg').html('<div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Your requirement is posted</div>')
+
+                                   swal("You requirement is updated") 
+                              window.location.href='requirement.html';
+
+                                }
+                })
+        }
+    })
+
+}); 
+
+     function fetch_all_category()
+        {
+
+         
+var html='<option value="any">Any Category</option>'
+
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_categories",
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+             
+              $.each(obj, function(key,val) {
+                if(val.parent!=0)
+                var title='--'+val.title
+                else
+                var title=val.title
+
+              html+='<option value='+val.id+'>'+title+'</option>'
+              
+
+             
+                })
+             $('#category').append(html);
+             
+          });
+
+        }
+
+       
+       function fetch_state()
+        {
+            
+
+         var html='';
+
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_state",
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+             
+              $.each(obj, function(key,val) {
+               
+
+              html+='<option value='+val.id+' >'+val.name+'</option>'
+              
+
+             
+                })
+             $('#state').append(html);
+             
+          });
+
+        }
+
+ function fetch_city(city)
+        {
+            var val=$("#state").val();
+
+         var html='';
+         var selected='';
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_city/"+val,
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+             
+              $.each(obj, function(key,val) {
+               
+              if(city!=undefined)
+                if(city==val.id)
+                {
+                    var selected='selected';
+                }
+              html+='<option value='+val.id+'  '+selected+'>'+val.name+'</option>'
+              
+
+             
+                })
+             $('#city').append(html);
+             
+          });
+
+        }
+   
+       
+
+        function fetch_child_category(val)
+        {
+
+        
+
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_child_categories/"+val,
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+              console.log(obj)
+              $.each(obj, function(key,val) {
+                var html="<a><li>"+val.title+"("+val.count+")</li></a>";
+                $('.parent_ul[ul-id='+val.parent+']').append(html);
+                })
+
+          });
+
+        }
+
+
+        
+
+</script>
+
+<div id="signin-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                    <h4 class="modal-title" id="myModalLabel">Login to your Account </h4>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Login starts -->
+                    <div class="well login-reg-form">
+
+                        <!-- Form -->
+                        <form  class="form-horizontal" role="form" id='frmlogin' name='frmlogin'>
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <!-- Label -->
+                                <label for="user" class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-9">
+                                    <!-- Input -->
+                                    <input type="text" class="form-control" id="email1" name="useremail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-sm-3 control-label">Password</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" id="pwd1" name="password" placeholder="Password">
+                                </div>
+                            </div>
+                                                        <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Remember Me                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <!-- Button -->
+                                    <button type="submit" class="btn btn-red">Login</button>&nbsp;
+                                    <button type="reset" class="btn btn-white">Reset</button>
+                                </div>
+                            </div>
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <a href="" class="black">Forgot Password ?</a> 
+                                                                 <a href="signup.html" class="black">Sign Up</a>
+                                                            </div>
+                        </form>
+                        <br>
+                                            </div>
+                    <!-- Login ends -->
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+
+            <!-- /.modal-content -->
+
+        </div>
+
+        <!-- /.modal-dialog -->
+
+    </div>
+
+
+
+
