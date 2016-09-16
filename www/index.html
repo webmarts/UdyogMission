@@ -159,7 +159,18 @@
             <div class="col-md-3 col-sm-3">
                 <!-- Logo section -->
                 <div class="logo">
-                    <h3><a href="index.html"><img src="img/logo-default.png" alt="Logo" style="height:63px"></a></h3>
+                  <div class="row">
+                    <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1">
+                   <h3><a href="index.html"><img src="img/logo-default.png" alt="Logo" style="height:63px"></a></h3>
+
+</div>
+ <div class="col-md-11 col-sm-11 col-xs-11 col-lg-11">
+                   <strong> <h2 style="color:red;text-align:center;margin-top:15px">  UdyogMission </h2></strong>
+                   </div>
+
+                   </div>
+
+                   </div>
                 </div>
             </div>
             <div class="col-md-9 col-sm-9">
@@ -658,7 +669,7 @@ var html='<div class="col-md-4 col-sm-4 col-xs-4" ><div class="counter-item '+va
                  if(val.featured_img=='')
                    val.featured_img='good-course.jpg'
 
-                  var html='<div class="blog-one-item row"><h5 align="left" style="word-wrap:break-word;margin-left:15px"> <a onclick="viewpost('+val.id+')">'+val.title+'</a></h5>  <div class="blog-one-img col-md-3 col-sm-3 col-xs-5"><a onclick="viewpost('+val.id+')"><div class="image-style-one"><img style="height:120px;width:130px;border:1px solid #000000;padding:5px" class="img-responsive" alt="'+val.title+'" src="http://www.bramhodyogexpo.in/UdyogMission/uploads/images/'+val.featured_img+'"></div></a></div><div align="left" class="blog-one-content col-md-9 col-sm-9 col-xs-7"> <a style="color:black"  onclick="fetch_post_by_category('+category.id+')"><i style="color:black" class="fa '+category.fa_icon+'"></i> &nbsp; '+category.title+'</a> &nbsp; <br> <a style="color:black" onclick="fetch_post_by_city('+city.id+')"><i  class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+'</a>'+website+' <br><a href="mailto:'+val.email+'"   target="_top"><i style="color:green" class="fa fa-envelope"></i>&nbsp;'+val.email+'</a> &nbsp;<br><a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
+                  var html='<div class="blog-one-item row"><h5 align="left" style="word-wrap:break-word;margin-left:15px"> <a onclick="viewpost('+val.id+')">'+val.title+'</a></h5>  <div class="blog-one-img col-md-3 col-sm-3 col-xs-5"><a onclick="viewpost('+val.id+')"><div class="image-style-one"><img style="height:120px;width:130px;border:1px solid #000000;padding:5px" class="img-responsive" alt="'+val.title+'" src="http://www.bramhodyogexpo.in/UdyogMission/uploads/images/'+val.featured_img+'"></div></a></div><div align="left" class="blog-one-content col-md-9 col-sm-9 col-xs-7"> <a style="color:#e30074"  onclick="fetch_post_by_category('+category.id+')"><i style="color:#e30074" class="fa fa-tag"></i> &nbsp; '+category.title+'</a> &nbsp; <br> <a style="color:black" onclick="fetch_post_by_city('+city.id+')"><i  class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+'</a>'+website+' <br><a href="mailto:'+val.email+'"   target="_top"><i style="color:green" class="fa fa-envelope"></i>&nbsp;'+val.email+'</a> &nbsp;<br><a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
                $('#griddiv').append(html);
        
             var curr_li = parseInt(val.rating);
@@ -729,7 +740,7 @@ var html='<div class="col-md-4 col-sm-4 col-xs-4" ><div class="counter-item '+va
                  if(val.featured_img=='')
                   val.featured_img='good-course.jpg'
 
-                  var html='<div class="blog-one-item row"><h5 align="left" style="word-wrap:break-word;margin-left:15px"> <a onclick="viewpost('+val.id+')">'+val.title+'</a></h5>  <div class="blog-one-img col-md-3 col-sm-3 col-xs-5"><a onclick="viewpost('+val.id+')"><div class="image-style-one"><img style="height:120px;width:130px;border:1px solid #000000;padding:5px" class="img-responsive" alt="'+val.title+'" src="http://www.bramhodyogexpo.in/UdyogMission/uploads/images/'+val.featured_img+'"></div></a></div><div align="left" class="blog-one-content col-md-9 col-sm-9 col-xs-7"> <a style="color:black"  onclick="fetch_post_by_category('+category.id+')"><i style="color:black" class="fa '+category.fa_icon+'"></i> &nbsp; '+category.title+'</a> &nbsp; <br> <a style="color:black" onclick="fetch_post_by_city('+city.id+')"><i  class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+'</a>'+website+' <br><a href="mailto:'+val.email+'"   target="_top"><i style="color:green" class="fa fa-envelope"></i>&nbsp;'+val.email+'</a> &nbsp;<br><a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
+                  var html='<div class="blog-one-item row"><h5 align="left" style="word-wrap:break-word;margin-left:15px"> <a onclick="viewpost('+val.id+')">'+val.title+'</a></h5>  <div class="blog-one-img col-md-3 col-sm-3 col-xs-5"><a onclick="viewpost('+val.id+')"><div class="image-style-one"><img style="height:120px;width:130px;border:1px solid #000000;padding:5px" class="img-responsive" alt="'+val.title+'" src="http://www.bramhodyogexpo.in/UdyogMission/uploads/images/'+val.featured_img+'"></div></a></div><div align="left" class="blog-one-content col-md-9 col-sm-9 col-xs-7"> <a style="color:#e30074"  onclick="fetch_post_by_category('+category.id+')"><i style="color:#e30074" class="fa fa-tag"></i> &nbsp; '+category.title+'</a> &nbsp; <br> <a style="color:black" onclick="fetch_post_by_city('+city.id+')"><i  class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+'</a>'+website+' <br><a href="mailto:'+val.email+'"   target="_top"><i style="color:green" class="fa fa-envelope"></i>&nbsp;'+val.email+'</a> &nbsp;<br><a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
                $('#griddiv').append(html);
                   
             var curr_li = parseInt(val.rating);

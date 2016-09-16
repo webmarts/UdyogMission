@@ -20,7 +20,10 @@
       
     <script src="js/jquery-2.1.1.min.js"></script>
  <script src="js/main.js"></script>
-   
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
     <!-- Styles -->
     <!-- Bootstrap CSS -->
     <style type="text/css">
@@ -111,7 +114,13 @@
             <div class="col-md-3 col-sm-3">
                 <!-- Logo section -->
                 <div class="logo">
-                    <h3><a href="index.html"><img src="img/logo-default.png" alt="Logo" style="height:63px"></a></h3>
+                    <div class="row"><div class="col-md-1 col-sm-1 col-xs-1 col-lg-1">
+                   <h3><a href="index.html"><img src="img/logo-default.png" alt="Logo" style="height:63px"></a></h3>
+
+</div>
+ <div class="col-md-11 col-sm-11 col-xs-11 col-lg-11">
+                   <strong> <h2 style="color:red;text-align:center;margin-top:15px">  UdyogMission </h2></strong>
+         </div></div></div>
                 </div>
             </div>
             <div class="col-md-9 col-sm-9">
@@ -204,19 +213,10 @@
                             <div class="single-property">
 
                                 
-                                <div class="detail-slider">
-                                    <div class="lSSlideOuter  noPager"><div class="usingCss" style="transition-duration: 1000ms; transition-timing-function: ease;"><ul id="imageGallery" class="lightSlider lSSlide" style="width: 801px; transform: translate3d(0px, 0px, 0px); height: 200px; padding-bottom: 0%;">
-
-                                     <center>   <li  style="list-style-type: none;"   data-thumb="http://www.bramhodyogexpo.in/uploads/images/cafe1.jpg" data-src="http://www.bramhodyogexpo.in/uploads/images/cafe1.jpg" class="lslide active" style="width: 801px; margin-right: 0px;">
-                                            <span class="helper"></span>
-                                            <img src="" id='postimg'>
-                                        </li></center
-
-                                                                                
-                                    </ul><div class="lSAction" style="display: none;"><a class="lSPrev"></a><a class="lSNext"></a></div></div><ul class="lSPager lSpg" style="margin-top: 5px;"></ul></div>
-                                </div>
-                                <div class="clearfix"></div>
-
+                                            <img src="" id='postimg'  class="img-responsive" height="100%" width="100%">
+                                       
+                                    
+                               
                                 <hr>
                                 <div class="info-box" style="padding:5px">
                                
@@ -265,7 +265,7 @@
 
                                        
                                     
-                                   <!-- <div class="ad-detail-info">
+                                  <!--  <div class="ad-detail-info">
                                         <span class="span-left"><i class="fa fa-eye view-icon"></i> Views:</span>
 
                                         <span class="span-right" id="post_views">
@@ -312,7 +312,7 @@
 
                                 <!--span><strong>Contact Mode</strong>: Phone, Email</span-->
 
-                                <div class="clearfix"></div>
+                                
                                 <div class="table-responsive">
                                     <table class="table table-bordered">
                                         <tbody><tr>
@@ -348,7 +348,7 @@
                              <span class="review-form-holder">
 <div class="review-panel">
     
-</div>
+
 
 <script type="text/javascript">
     $(document).ready(function(){
@@ -369,7 +369,9 @@
             });
         });
     });
-</script></span>
+</script>
+</div>
+</span>
 
 <div id='review-msg'></div>
 <div id='review-div'>
@@ -379,20 +381,21 @@
         <div class="form-group">
             <label for="enquiryInput3">Rating : </label>
             <div class="clearfix"></div>
-            <input type="hidden" class="form-control" id="rating" name="rating" value="3">
+            <input type="hidden" class="form-control" id="rating" name="rating" value="5">
             <ul class="rating-input stars">
                 <li class="star-1 fa fa-star active" star="1"></li>
                 <li class="star-2 fa fa-star active" star="2"></li>
                 <li class="star-3 fa fa-star active" star="3"></li>
-                <li class="star-4 fa fa-star" star="4"></li>
-                <li class="star-5 fa fa-star" star="5"></li>
+                <li class="star-4 fa fa-star active" star="4"></li>
+                <li class="star-5 fa fa-star active" star="5"></li>
             </ul>
             <div class="clearfix"></div>
         </div>
         <div class="form-group">
             <label for="enquiryInput4">Comment</label>
-            <textarea class="form-control" id="comment" name="comment" placeholder="Comment" rows="7"></textarea><grammarly-btn><div style="z-index: 2; opacity: 1; transform: translate(800.5px, 254px);" class="_9b5ef6-textarea_btn _9b5ef6-anonymous _9b5ef6-not_focused" data-grammarly-reactid=".6"><div class="_9b5ef6-transform_wrap" data-grammarly-reactid=".6.0"><div title="Protected by Grammarly" class="_9b5ef6-status" data-grammarly-reactid=".6.0.0">&nbsp;</div></div></div></grammarly-btn>
-                    </div>
+            <textarea class="form-control" id="comment" name="comment" placeholder="Comment" rows="7">
+            </textarea>
+        </div>
 
 
 
@@ -405,7 +408,6 @@
 
 
 
-
                                                          <div style="margin-top:20px"></div>
                              <h4 class="info-subtitle"><i class="fa fa-rocket"></i> Recent reviews</h4>
                              <div id="reviews-holder" class="team-two mCustomScrollbar _mCS_1 mCS_no_scrollbar"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
@@ -415,7 +417,7 @@
             </div>
            
 </div>
-</div>
+
 <!-- Main content ends -->
 <!-- Footer Starts -->
 
@@ -774,9 +776,40 @@ $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_review_by_p
          var obj = JSON.parse(data);
 
          $.each(obj,function(key,val){
-            var html='<div class="row review-2"><div class="col-md-2 col-xs-12"><a href=""><img alt="user-image" src="http://www.bramhodyogexpo.in/UdyogMission/uploads/profile_photos/nophoto-male.jpg" class="img-responsive user-img"></a></div><div class="col-md-10 col-xs-12"><h4>'+val.first_name+' '+val.last_name+'</h4><p class="contact-types"><span class="stars"><i class="fa fa-star "></i><i class="fa fa-star "></i><i class="fa fa-star "></i><i class="fa fa-star "></i><i class="fa fa-star "></i></span></p><div class="clearfix"></div><strong>Posted on:</strong><p></p><p>'+val.comment+'</p></div></div><hr>'
+
+        var months = new Array(12);
+            months[0] = "Jan";
+            months[1] = "Feb";
+            months[2] = "Mar";
+            months[3] = "Apr";
+            months[4] = "May";
+            months[5] = "Jun";
+            months[6] = "Jul";
+            months[7] = "Aug";
+            months[8] = "Sep";
+            months[9] = "Oct";
+            months[10] = "Nov";
+            months[11] = "Dec";
+    
+
+        var currentTime= new Date(obj.create_date);
+        var month = currentTime.getMonth();
+        var day = currentTime.getDate();
+        var year = currentTime.getFullYear();
+        var date = day + " " + months[month] + " " + year;
+            
+            console.log(val.rating)
+            var html='<div class="row review-2"><div class="col-md-2 col-xs-12"><a href=""><img alt="user-image" src="http://www.bramhodyogexpo.in/UdyogMission/uploads/profile_photos/nophoto-male.jpg" class="img-responsive user-img"></a></div><div class="col-md-10 col-xs-12"><h4>'+val.user_email+'</h4><p class="contact-types"><span class="rateYo"></span></p><div class="clearfix"></div><strong>Posted on:</strong><p>'+date+'</p><p>'+val.comment+'</p></div></div><hr>'
              $('#mCSB_1_container').append(html)
+
+              $(".rateYo").rateYo({
+                rating: parseFloat(val.rating)
+
+                });
+
+
             })
+
         
          })
 

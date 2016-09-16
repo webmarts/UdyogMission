@@ -115,7 +115,18 @@
             <div class="col-md-3 col-sm-3">
                 <!-- Logo section -->
                 <div class="logo">
-                    <h3><a href="index.html"><img src="img/logo-default.png" alt="Logo" style="height:63px"></a></h3>
+                   <div class='row'>
+                    <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1">
+                   <h3><a href="index.html"><img src="img/logo-default.png" alt="Logo" style="height:63px"></a></h3>
+
+</div>
+ <div class="col-md-11 col-sm-11 col-xs-11 col-lg-11">
+                   <strong> <h2 style="color:red;text-align:center;margin-top:15px">  UdyogMission </h2></strong>
+                   </div>
+
+                   </div>
+
+                   </div>
                 </div>
             </div>
 
@@ -681,7 +692,7 @@ var per_page = '6';
                
                 
                     
-               var html='<div class="blog-one-item row"><div class="blog-one-content col-md-12 col-sm-12 col-xs-12"><h3 style="word-wrap:break-word;"><a  onclick="viewpost('+val.id+')">'+val.title+'</a></h3><p id="restrict">'+(val.description).substring(0,20)+'....'+'</p><div class="blog-meta">'+category.title+'<br><i style="color:green" class="fa fa-envelope"></i>&nbsp;<a href="mailto:'+val.email+'"target="_top">&nbsp;'+val.email+'</a><br><i class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+' &nbsp;<a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
+               var html='<div class="blog-one-item row"><div class="blog-one-content col-md-12 col-sm-12 col-xs-12"><h3 style="word-wrap:break-word;"><a  onclick="viewpost('+val.id+')">'+val.title+'</a></h3><p id="restrict">'+(val.description).substring(0,20)+'....'+'</p><div class="blog-meta"><span style="color:#e30074"><i class="fa fa-tag" style="color:#e30074"></i>&nbsp;'+category.title+'</span><br><i style="color:green" class="fa fa-envelope"></i>&nbsp;<a href="mailto:'+val.email+'"target="_top">&nbsp;'+val.email+'</a><br><i class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+' &nbsp;<a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
                 $("#griddiv").append(html);
                 })
                 });
