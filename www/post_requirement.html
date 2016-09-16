@@ -264,7 +264,7 @@
             <div class="col-md-12">
                 <hr>
                 <div class="form-group" style="text-align:center">
-                    <button class="btn btn-color" type="submit">Save</button>
+                    <button class="btn btn-color" type="submit">Post</button>
                     <button class="btn btn-default" type="reset">Reset</button><br><br>
                 </div>
             </div>
@@ -554,7 +554,7 @@ $("#frmpost").submit(function(e){
             var description=$('#description').val();
             var user_id=window.localStorage['id'];
 
-            if($("#category").val()=="")
+            if(flag==true && $("#category").val()=="")
           {
               $("#category").addClass('text-danger')
               alert('Please Enter Category')
@@ -563,7 +563,7 @@ $("#frmpost").submit(function(e){
               flag=false;
           }
           
-            if($("#title").val()=="")
+            if(flag==true && $("#title").val()=="")
           {
               $("#title").addClass('text-danger')
               alert('Please Enter Title')
@@ -571,7 +571,7 @@ $("#frmpost").submit(function(e){
               flag=false;
           }
 
-           if($("#description").val()=="")
+           if(flag==true && $("#description").val()=="")
           {
               $("#description").addClass('text-danger')
               alert('Please Enter Description')
@@ -580,7 +580,7 @@ $("#frmpost").submit(function(e){
           }
 
 
-          if($("#phone_no").val()=="")
+          if(flag==true && $("#phone_no").val()=="")
           {
               $("#phone_no").addClass('text-danger')
               alert('Please Enter Phone No')
@@ -588,7 +588,7 @@ $("#frmpost").submit(function(e){
               flag=false;
           }
 
-           if($("#email").val()=="")
+           if(flag==true && $("#email").val()=="")
           {
               $("#email").addClass('text-danger')
               alert('Please Enter Email')
@@ -599,7 +599,7 @@ $("#frmpost").submit(function(e){
         
 
 
-            if($("#state").val()=="")
+            if(flag==true && $("#state").val()=="")
           {
               $("#state").addClass('text-danger')
               alert('Please Enter State')
@@ -607,7 +607,7 @@ $("#frmpost").submit(function(e){
               flag=false;
           }
 
-            if($("#city").val()=="")
+            if(flag==true && $("#city").val()=="")
           {
               $("#city").addClass('text-danger')
               alert('Please Enter City')
@@ -637,7 +637,7 @@ $("#frmpost").submit(function(e){
             function(data, status){
                     var jsondata = $.parseJSON(data)
                                 console.log(jsondata)
-                                if(jsondata.success==1)
+                                if(jsondata.success>=1)
                                 {
                                    //    $('#category').val('');
                                    //     $('#phone_no').val('');

@@ -265,14 +265,14 @@
 
                                        
                                     
-                                    <div class="ad-detail-info">
+                                   <!-- <div class="ad-detail-info">
                                         <span class="span-left"><i class="fa fa-eye view-icon"></i> Views:</span>
 
                                         <span class="span-right" id="post_views">
                                                                                   </span>
                                     </div>
 
-                                         <!--                               <div class="ad-detail-info">
+                                                                        <div class="ad-detail-info">
                                         <span class="span-left"><i class="fa fa-bookmark bookmark-icon"></i> Featured:</span>
 
                                         <span class="span-right" id="post_featured">
@@ -680,8 +680,7 @@ $(document).ready(function(){
          $('#login').removeAttr('href');
          $('#login').html('Signin')
          $('#review-div').hide();
-         document.location.href='index.html';
-           $('#post_requirement').hide();
+         $('#post_requirement').hide();
          $('#signup').show();
 		  $('.myaccount').hide();
     }
@@ -735,7 +734,10 @@ $(document).ready(function(){
         var year = currentTime.getFullYear();
         var date = day + " " + months[month] + " " + year;
 
-        console.log(date)
+        if(obj.featured_img=='')
+                  obj.featured_img='good-course.jpg'
+
+
         $('#postimg').attr('src','http://www.bramhodyogexpo.in/UdyogMission/uploads/images/'+obj.featured_img)
         $('#category_icon').html('<i class="fa '+obj.fa_icon+' category"></i>')
         $('#title').html(obj.title+' <span> '+obj.category+'</span>')
