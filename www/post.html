@@ -734,7 +734,7 @@ $(document).ready(function(){
         var month = currentTime.getMonth();
         var day = currentTime.getDate();
         var year = currentTime.getFullYear();
-        var date = day + " " + months[month] + " " + year;
+        var date = day + "/" + month + "/" + year;
 
         if(obj.featured_img=='')
                   obj.featured_img='good-course.jpg'
@@ -792,14 +792,14 @@ $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_review_by_p
             months[11] = "Dec";
     
 
-        var currentTime= new Date(obj.create_date);
+        var currentTime= new Date(val.create_date);
+        console.log(currentTime)
         var month = currentTime.getMonth();
         var day = currentTime.getDate();
         var year = currentTime.getFullYear();
-        var date = day + " " + months[month] + " " + year;
+        var cdate = day + "/" +month + "/" + year;
             
-            console.log(val.rating)
-            var html='<div class="row review-2"><div class="col-md-2 col-xs-12"><a href=""><img alt="user-image" src="http://www.bramhodyogexpo.in/UdyogMission/uploads/profile_photos/nophoto-male.jpg" class="img-responsive user-img"></a></div><div class="col-md-10 col-xs-12"><h4>'+val.user_email+'</h4><p class="contact-types"><span class="rateYo"></span></p><div class="clearfix"></div><strong>Posted on:</strong><p>'+date+'</p><p>'+val.comment+'</p></div></div><hr>'
+                        var html='<div class="row review-2"><div class="col-md-2 col-xs-12"><a href=""><img alt="user-image" src="http://www.bramhodyogexpo.in/UdyogMission/uploads/profile_photos/nophoto-male.jpg" class="img-responsive user-img"></a></div><div class="col-md-10 col-xs-12"><h4>'+val.first_name+' '+val.last_name+'</h4><p class="contact-types"><span class="rateYo"></span></p><div class="clearfix"></div><strong>Posted on:</strong><p>'+cdate+'</p><p>'+val.comment+'</p></div></div><hr>'
              $('#mCSB_1_container').append(html)
 
               $(".rateYo").rateYo({

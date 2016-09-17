@@ -175,12 +175,10 @@
 
                         <!-- Search Widget -->
                         <div class="form-group">
-                          <div class="input-group">
+                        
                           <input align='center' class="form-control" type="text" placeholder="Type anything" value="" name="plainkey" id='plainkey'>
-                            <span class="input-group-btn">
-                                <button type="submit" class="btn btn-color">Search</button>
-                            </span>
-                          </div>
+                            
+                         
                         </div>
 
 
@@ -650,6 +648,7 @@ $("#frmsingup").submit(function(e){
         var category=$('#category').val();
         
         var plainkey=$('#plainkey').val();
+        console.log(plainkey)
         
         var sort_by=$('#sort_by').val();
         if(sort_by==null)
@@ -714,8 +713,7 @@ $("#frmsingup").submit(function(e){
 
                  if(val.featured_img=='')
                   val.featured_img='good-course.jpg'
-
-                  var html='<div class="blog-one-item row"><h5 align="left" style="word-wrap:break-word;margin-left:15px"> <a onclick="viewpost('+val.id+')">'+val.title+'</a></h5>  <div class="blog-one-img col-md-2 col-sm-2 col-xs-3"><a onclick="viewpost('+val.id+')"><div class="image-style-one"><img style="height:110px;width:150px;border:1px solid #000000;padding:5px" class="img-responsive" alt="'+val.title+'" src="http://www.bramhodyogexpo.in/UdyogMission/uploads/images/'+val.featured_img+'"></div></a></div><div align="left" class="blog-one-content col-md-8 col-sm-8 col-xs-9"> <a style="color:#e30074"  onclick="fetch_post_by_category('+category.id+')"><i style="color:#e30074" class="fa fa-tag"></i>&nbsp; '+category.title+'</a> &nbsp; <br> <a style="color:black" onclick="fetch_post_by_city('+city.id+')"><i  class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+'</a>'+website+' <br><a href="mailto:'+val.email+'"   target="_top"><i style="color:green" class="fa fa-envelope"></i>&nbsp;'+val.email+'</a>&nbsp;<br><a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
+var html='<div class="blog-one-item row"><h5 align="left" style="word-wrap:break-word;margin-left:15px"> <a onclick="viewpost('+val.id+')">'+val.title+'</a></h5>  <div class="blog-one-img col-md-3 col-sm-3 col-xs-4"><a onclick="viewpost('+val.id+')"><div class="image-style-one"><img style="height:120px;width:130px;border:1px solid #000000;padding:5px" class="img-responsive" alt="'+val.title+'" src="http://www.bramhodyogexpo.in/UdyogMission/uploads/images/'+val.featured_img+'"></div></a></div><div align="left" class="blog-one-content col-md-9 col-sm-9 col-xs-8"> <a style="color:black"  onclick="fetch_post_by_category('+category.id+')"><i style="color:black" class="fa fa-tag"></i>&nbsp;<b>'+category.title+'</b></a> &nbsp; <br> <a style="color:black" onclick="fetch_post_by_city('+city.id+')"><i  class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+'</a>'+website+' <br><a href="mailto:'+val.email+'"   target="_top"><i style="color:green" class="fa fa-envelope"></i>&nbsp;'+val.email+'</a> &nbsp;<br><a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
                 $("#griddiv").append(html);
                 })
                 });

@@ -229,7 +229,7 @@
 
                        
                         <!-- Button -->
-                        <button class="btn btn-red submit-search-button" type="submit" onClick="fetch_result()">Search</button>&nbsp;
+                        <button class="btn submit-search-button" type="submit" onClick="fetch_result()" style="background-color:#32c8de;color:#ffffff">Search</button>&nbsp;
                         <button class="btn btn-default reset" type="reset">Reset</button>
                     </div>
 
@@ -692,7 +692,7 @@ var per_page = '6';
                
                 
                     
-               var html='<div class="blog-one-item row"><div class="blog-one-content col-md-12 col-sm-12 col-xs-12"><h3 style="word-wrap:break-word;"><a  onclick="viewpost('+val.id+')">'+val.title+'</a></h3><p id="restrict">'+(val.description).substring(0,20)+'....'+'</p><div class="blog-meta"><span style="color:#e30074"><i class="fa fa-tag" style="color:#e30074"></i>&nbsp;'+category.title+'</span><br><i style="color:green" class="fa fa-envelope"></i>&nbsp;<a href="mailto:'+val.email+'"target="_top">&nbsp;'+val.email+'</a><br><i class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+' &nbsp;<a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
+               var html='<div class="blog-one-item row"><div class="blog-one-content col-md-12 col-sm-12 col-xs-12"><h4 style="word-wrap:break-word;"><a  onclick="viewpost('+val.id+')">'+val.title+'</a></h3><p id="restrict">'+(val.description).substring(0,20)+'....'+'</p><div class="blog-meta"><span style="color:black"><i class="fa fa-tag" style="color:black"></i>&nbsp;<b>'+category.title+'</span></b><br><i style="color:green" class="fa fa-envelope"></i>&nbsp;<a href="mailto:'+val.email+'"target="_top">&nbsp;'+val.email+'</a><br><i class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+' &nbsp;<a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
                 $("#griddiv").append(html);
                 })
                 });
