@@ -688,16 +688,16 @@ $("#frmpost").submit(function(e){
             var featured_img=$('#featured-img-input').val();
             var user_id=window.localStorage['id'];
 
-           /* if($("#category").val()=="")
+           if(flag==true && $("#category").val()=="")
           {
               $("#category").addClass('text-danger')
-              alert('Please Enter Category')
+              alert('Please Select Category')
               
               $("#category").focus()
               flag=false;
           }
-          */
-          if($("#phone_no").val()=="")
+          
+          if($(flag==true && "#phone_no").val()=="")
           {
               $("#phone_no").addClass('text-danger')
               alert('Please Enter Phone No')
@@ -705,7 +705,7 @@ $("#frmpost").submit(function(e){
               flag=false;
           }
 
-           if($("#email").val()=="")
+           if(flag==true && $("#email").val()=="")
           {
               $("#email").addClass('text-danger')
               alert('Please Enter Email')
@@ -736,7 +736,7 @@ $("#frmpost").submit(function(e){
               $("#zip_code").focus()
               flag=false;
           }*/
-        if($("#state").val()=="")
+        if(flag==true && $("#state").val()=="")
           {
               $("#state").addClass('text-danger')
               alert('Please Enter State')
@@ -744,7 +744,7 @@ $("#frmpost").submit(function(e){
               flag=false;
           }
 
-            if($("#city").val()=="")
+            if(flag==true && $("#city").val()=="")
           {
               $("#city").addClass('text-danger')
               alert('Please Enter City')
@@ -752,14 +752,14 @@ $("#frmpost").submit(function(e){
               flag=false;
           }
 
-           if($("#address").val()=="")
+           if(flag==true && $("#address").val()=="")
           {
               $("#address").addClass('text-danger')
               alert('Please Enter Address')
               $("#address").focus()
               flag=false;
           }
-           if($("#title").val()=="")
+           if(flag==true && $("#title").val()=="")
           {
               $("#title").addClass('text-danger')
               alert('Please Enter Title')
