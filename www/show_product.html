@@ -19,8 +19,9 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
       
     <script src="js/jquery-2.1.1.min.js"></script>
-     <script src="js/main.js"></script>
- 
+    <script src="js/main.js"></script>
+
+
     <!-- Styles -->
     <!-- Bootstrap CSS -->
     <style type="text/css">
@@ -28,7 +29,6 @@
 </style>
     
 
-    
 <style>
     .top-bar{
         background: #fdfdfd; 
@@ -43,24 +43,26 @@
     }
     .header-2 .navy > ul > li > a{
         color: #666    }
-    .header-2 .navy ul ul li a{
-        color: #666        
+         
     }
    .header-2 .navy > ul > li > a:hover{
         color: #32c8de    }
-    .header-2 .navy ul ul li a:hover{
-        color: #32c8de        
+       
     }
     .header-2 .navy > ul > .active > a{
         color: #32c8de    }
-    .header-2 .navy ul ul .active a{
-        color: #32c8de        
+        
     }
 
     .real-estate .re-big-form{
         padding: 15px 0 0 0;
                 background: #9fee9b;        
             }
+    
+
+
+
+        
 </style>
 
 
@@ -71,8 +73,22 @@
 <div class="top-bar">
     <div class="container">
 
-       
-
+        
+        <!-- Search section for responsive design -->
+        <!--div class="tb-search pull-left">
+            <a href="#" class="b-dropdown"><i class="fa fa-search square-2 rounded-1 bg-color white"></i></a>
+            <div class="b-dropdown-block">
+                <form role="form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Type Something">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-color" type="button">Search</button>
+                                    </span>
+                    </div>
+                </form>
+            </div>
+        </div-->
+        
         <div class="clearfix"></div>
     </div>
 </div>
@@ -84,9 +100,8 @@
     <!-- Container -->
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
+                   <div class="col-md-12 col-sm-12 col-xs-12">
                 <!-- Logo section -->
-                      <!-- Logo section -->
                  
   <div id="mySidenav" class="sidenav">
    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -110,31 +125,35 @@
                    </li><li class="">
 
                        <a href="advance_search.html"> <i class="fa fa-search"style="color:#ffd700;font-size:25px;margin-right:10px"> </i>    Advanced Search</a></li>
+                       
+                                          <li class="">
+                         <a class="signup" id='signup'>
+                          <i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"> </i> Signup</a>
+                       </li>
+                      
+ 
 
- <li class="">
-
-                      <a href="#" class="dropdown-toggle myaccount" data-toggle="dropdown"> <i class="fa fa-key" style="color:#ffd700;font-size:25px;margin-right:10px"> </i>  My Account</a>
-<ul>
-<li class=" -child">
-<a href="show_listing.html">  <i class="fa fa-pencil"style="color:#ffd700;font-size:25px;margin-right:10px"> </i>   Edit Business Listing</a>
-</li>
-<li class=" -child">
-<a href="show_requirement.html"> <i class="fa fa-pencil"style="color:#ffd700;font-size:25px;margin-right:10px"> </i>    Edit Requirement</a>
-</li>
-<li class=" -child">
-<a href="show_product.html"> <i class="fa fa-pencil"style="color:#ffd700;font-size:25px;margin-right:10px"> </i>    Edit Product</a>
-</li>
-
-</ul>
+ <li class="myaccount">
+<div class="dropdown" style="margin:5px;padding:5px">
+   <button class="dropdown-toggle" id="menu1" type="button" data-toggle="dropdown" style="background:transparent !important ;color:#ffffff !important ;border:none;font-size:18px;"  ><i class="fa fa-key"style="color:#ffd700;font-size:25px;margin-right:10px" > </i>  My Account
+   <span class="caret"></span></button>
+   <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style="background-color:rgba(100,100,100,0.2);color:#ffffff !important;position:relative; width:100% !important; margin-bottom:20px">
+     <li role="presentation"><a role="menuitem" tabindex="-1" href="show_listing.html" style="color:#ffffff !important;font-size:18px"><i class="fa fa-edit"style="color:#ffd700;font-size:25px;margin-right:10px" > </i> Edit Business Listing</a></li>
+     <li role="presentation"><a role="menuitem" tabindex="-1" href="show_requirement.html" style="color:#ffffff !important"><i class="fa fa-edit"style="color:#ffd700;font-size:25px;margin-right:10px" > </i> Edit Requirement</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="show_product.html" style="color:#ffffff !important"><i class="fa fa-edit"style="color:#ffd700;font-size:25px;margin-right:10px" > </i> Edit Product</a></li>
+     
+   </ul>
+ </div>
 
                   </li>
                    <li class="">
                          <a class="post_requirement" id='post_requirement' href="requirement.html"><i class="fa fa-th-large"style="color:#ffd700;font-size:25px;margin-right:10px"> </i>Requirement</a>
                        </li>
-                        
-                        <li class="">
-                          <a href='logout.html'><i class="fa fa-sign-out" style="color:#ffd700;font-size:25px;margin-right:10px"> </i> Logout</a>
-                       </li>
+                         <li class="">
+                          <a class="signin" id="login"> 
+                            <i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"> </i> Signin</a>
+                       </li> 
+                       
                        
                    </ul>
 </div>
@@ -165,140 +184,85 @@
 
 
 
-<!-- Main content starts -->
-<div class="main-block">
-   <div class="page-heading-two">
-    <div class="container">
-        <h2>Signup <span>Create your account</span></h2>        
-        <div class="clearfix"></div>
-    </div>
-</div>
-</div>
-
 <div class="container">
-    <div class="row">
-        
-        <div class="col-md-12">
-            <!-- Login starts -->
-            <div class="well login-reg-form">
-                <!-- Heading -->
-                <h4>Register your Account</h4>
-                <hr>
-                <!-- Form -->
-                <!-- Form Horizontal -->
-                <div id="review-msg"></div>
-                <form style="max-width: 615px" class="form-horizontal" id="frmsingup" id="frmsingup">
 
-                    <input type="hidden" name="package_id" value="">
+  <div class="block-heading-two">
 
-                    <!-- Form Group -->
-                    <div class="form-group">
-                        <!-- Label -->
-                        <label for="name" class="col-sm-3 control-label">First Name <span class="text-danger">*</span></label>
-                        <div class="col-sm-9">
-                            <!-- Input -->
-                            <input type="text" name="first_name" value="" id="fname" placeholder="First Name" class="form-control">
-                                                    </div>
-                    </div>
-
-                    <div class="form-group">
-                        <!-- Label -->
-                        <label for="name" class="col-sm-3 control-label">Last Name <span class="text-danger">*</span></label>
-                        <div class="col-sm-9">
-                            <!-- Input -->
-                            <input type="text" name="last_name" value="" id="lname" placeholder="Last Name" class="form-control">
-                                                    </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-sm-3 control-label">Email <span class="text-danger">*</span></label>
-                        <div class="col-sm-9">
-                            <input type="email" name="useremail" value="" id="email" placeholder="Email" class="form-control">
-                                                    </div>
-                    </div>
-
-                   
-
-                    <div class="form-group">
-                        <label for="password" class="col-sm-3 control-label">Password <span class="text-danger">*</span></label>
-                        <div class="col-sm-9">
-                            <input type="password" name="password" id="password" placeholder="Password" class="form-control">
-                                                    </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password" class="col-sm-3 control-label">Confirm Password <span class="text-danger">*</span></label>
-                        <div class="col-sm-9">
-                            <input type="password" name="repassword" id="repassword" placeholder="Confirm Password" class="form-control">
-                                                    </div>
-                    </div>
-
-                <!--<div class="form-group">
-                        <div class="col-sm-offset-3 col-sm-9">
-                            <input type="hidden" name="terms_conditon" id="terms_conditon" value="">
-
-                           
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="terms_conditon_field" id="terms_conditon_field">
-                                    I've read the <a  href="term_con.html">Terms and Condition</a>
-                                </label>
-                                                            </div>
-                        </div>-->
-                    
-                    <div class="form-group">
-                        <div class="col-sm-offset-3 col-sm-9">
-                            <!-- Buton --><br>
-                            <button type="submit" class="btn btn-red">Register</button>&nbsp;
-                            <button type="reset" class="btn btn-white">Reset</button>
-                        </div>
-                    </div></div>
-                </form>
-                <hr>
-                              
-                            </div>
-            <!-- Login ends -->
-        </div>
-    </div>
-
+    <h3 align='center'><div id='heading'>List Product</div></h3>
 </div>
 
-<!-- Main content ends -->
-<!-- Footer Starts -->
-<footer>
+
+
+  <div class="row">
+    <div class="col-md-9 col-sm-12 col-xs-12 parent_cat1">
+        
+        <span class="recent-post"><div class="blog-one" id="griddiv"></div></span>
+        
+       
+        
+        
+        
+        
+    </div>
+            
+
+</div>
+<div class="clearfix"></div>
+</span>
+      <div class="ajax-loading recent-loading" style="display: none;"><img src="img/loading.gif" alt="loading..."></div>
+      <a href="" class="load-more-recent btn btn-blue" style="width:100%">Load More</a><br>
+    </div> <!-- end of main content -->
+    </div>
+
+
+<br>
+<br>
+<br>
+<div class="footer navbar-fixed-bottom" style="background-color:black;color:white;" >
     <!-- Container -->
     <div class="container">
         <!-- Footer Content -->
             <!-- Paragraph -->
-            <p class="pull-left">UdyogMission 2016, all rights reserved | Developed by <a href="http://www.webmarts.in">Webmart </a> support@bramhodyogexpo.in </p>
+            <center>
+            <p>UdyogMission 2016, all rights reserved <br> Developed by <a href="http://www.webmarts.in">Webmart </a> support@bramhodyogexpo.in </p>
+            </center>
             
             <div class="clearfix"></div>
     </div>
-</footer>
-
-<!-- Top bar starts -->
-
 </div>
 
+   
 </div>
+
+<div id="modal">
+    <!-- Container -->
+   
+</div>
+</div>
+
+<span class="totop" style="display: none;"><a href="#"><i class="fa fa-angle-up bg-color"></i></a></span>
+
+<span class="cattop" style="display: none;" id="cattop"><a href="#" ><i class="fa fa-edit" ></i></a></span>
+
     <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 
 <!--    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
 
 
-    <span class="totop" style="display: none;"><a href="#"><i class="fa fa-angle-up bg-color"></i></a></span>
+   
 
     <!-- Javascript files -->
 
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Placeholders JS -->
-  
+    
     <!-- Magnific Popup -->
     <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- Owl carousel -->
    
-      <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+
+
+
+
 
 <script type="text/javascript">
 
@@ -310,70 +274,7 @@
        document.getElementById("mySidenav").style.width = "0";
    }
 
-
-$(function(){
- 
-  
-$("#frmlogin").submit(function(e){
-      e.preventDefault()
-    flag=true;
-    $("#frmlogin input").removeClass("text-danger")
-         if(flag==true && $("#email1").val()=="")
-           {
-               $("#email1").addClass('text-danger')
-               alert('Please Enter Email')
-               
-               $("#email1").focus()
-               flag=false;
-           }
-           
-           if(flag==true && $("#pwd1").val()=="")
-           {
-               $("#pwd1").addClass('text-danger')
-               alert('Please Enter Password')
-               $("#pwd1").focus()
-               flag=false;
-           }
-            if (flag==true)
-            {
-                console.log("start")
-                var senddata = $("#frmlogin").serialize()
-                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/login",senddata)
-                .done(function(data){
-                     try{
-                        var jsondata = $.parseJSON(data)
-                        console.log(jsondata)
-                        if(jsondata.status=='true')
-                        {
-                                
-                         
-                            window.localStorage["username"] = jsondata.email;
-                            window.localStorage["id"] = jsondata.userid;  
-                            document.location.href="subscribe.html";   
-                            /*location.reload();*/
-                        }
-                        else
-                        {
-                            
-                           alert(jsondata.reason);
-                        }
-                     }
-                     catch(e){}
-
-                })
-                .fail(function(){
-                    console.log("fail");
-                })
-
-            }
-            else
-            {
-                $("#regmsg").html("  Please Fill The all form ")
-            }
-
-    
-    })
-});
+    $(".dropdown-toggle").dropdown();
 
 
 $(function(){
@@ -384,50 +285,50 @@ $(function(){
         $('#signin-modal').modal('show');
     });
 
-    // jQuery(window).resize(function(){
-    //    console.log(jQuery(window).width()); 
-    // });
 
-     $('.signup').click(function(){
+    $('.signup').click(function(){
        
         $('#signup-modal').modal('show');
     });
+
+    // jQuery(window).resize(function(){
+    //    console.log(jQuery(window).width()); 
+    // });
 });
 
+ $(".dropdown-toggle").dropdown();
 
-</script>
-        <script type="text/javascript">
-    $(document).ready(function(){
-     window.localStorage['plainkey']='';
-      window.localStorage['city']='';
-       window.localStorage['category']='';
-        window.localStorage['sort_by']='';
-    var user = window.localStorage["username"];
+$(document).ready(function(){
+
+var user = window.localStorage["username"];
 
     
     
     if(user=="" || !user)
     {
-       $('#list_business').attr('href','login.html');
-        $('#login').addClass('signin');
+         $('#list_business').attr('href','login.html');
+         $('#login').addClass('signin');
          $('#login').removeAttr('href');
          $('#login').html('Signin')
-           $('#post_requirement').hide();
+         $('#post_requirement').hide();
          $('#signup').show();
          $('.myaccount').hide();
-       
+
     }
     else
     {
         $('#post_requirement').show();
-         $('#signup').hide();
+        $('#signup').hide();
+        $('.myaccount').show();
+        $('#email').val(user);
         $('#list_business').attr('href','subscribe.html');
         $('#login').removeClass('signin');
         $('#login').attr('href','logout.html');
         $('#login').html('Logout')
-        $('.myaccount').show();
     }
-    
+
+fetch_result()
+
 $("#frmsingup").submit(function(e){
       e.preventDefault()
     flag=true;
@@ -543,8 +444,137 @@ $("#frmsingup").submit(function(e){
 
     
     })
+$("#frmlogin").submit(function(e){
+      e.preventDefault()
+    flag=true;
+    $("#frmlogin input").removeClass("text-danger")
+            if(flag==true && $("#email1").val()=="")
+           {
+               $("#email1").addClass('text-danger')
+               alert('Please Enter Email')
+               
+               $("#email1").focus()
+               flag=false;
+           }
+           
+           if(flag==true && $("#pwd1").val()=="")
+           {
+               $("#pwd1").addClass('text-danger')
+               alert('Please Enter Password')
+               $("#pwd1").focus()
+               flag=false;
+           }
+            if (flag==true)
+            {
+                console.log("start")
+                var senddata = $("#frmlogin").serialize()
+                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/login",senddata)
+                .done(function(data){
+                     try{
+                        var jsondata = $.parseJSON(data)
+                        console.log(jsondata)
+                        if(jsondata.status=='true')
+                        {
+                                
+                         
+                            window.localStorage["username"] = jsondata.email;
+                            window.localStorage["id"] = jsondata.userid;  
+                            document.location.href="subscribe.html";   
+                            /*location.reload();*/
+                        }
+                        else
+                        {
+                            
+                           alert(jsondata.reason);
+                        }
+                     }
+                     catch(e){}
+
+                })
+                .fail(function(){
+                    console.log("fail");
+                })
+
+            }
+            else
+            {
+                $("#regmsg").html("  Please Fill The all form ")
+            }
+
+    
+    })
 }); 
+
+     
+
+        
+ 
+ var per_page = '6';
+    var recent_count = '6';
+        $('.load-more-recent').click(function(e){
+      e.preventDefault();
+      var next = parseInt(recent_count)+parseInt(per_page);
+
+      var url = "http://www.bramhodyogexpo.in/UdyogMission/index.php/home/getresult_ajax/"+next
+      /*url = url.replace('/'+recent_count,'/');*/
+      recent_count = next;
+   fetch_result(url);
+  });
+
+    function fetch_result(url)
+    {
+       
+       
+      
+         if(url==undefined)
+        {
+         url="http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_product/6";   
+        }
+        /*console.log(url)*/
+         $.post(url,{user_id:window.localStorage['id']},
+            function(data, status){
+                 $("#griddiv").html('');
+                  var obj = JSON.parse(data);
+                  console.log(obj)
+
+                  if(obj.length<=0)
+                  {
+                  $("#griddiv").html('No result found');
+                   $('.load-more-recent').hide();
+                  }
+
+                  if(obj[0].lastid==obj.length)
+                   {
+                        $('.load-more-recent').hide();
+                   }
+                   else
+                   {
+                    $('.load-more-recent').show();
+                   }
+              $.each(obj, function(key,val) {
+                
+
+                
+              
+                var city=val.city[0];
+                var category=val.category[0];
+                
+                 
+var html='<div class="blog-one-item row"><h5 align="left" style="word-wrap:break-word;margin-left:15px;color:red">'+category.name+' <a href="edit_product.html?id='+val.id+'" style="float:right;margin-right:10px"><i class="fa fa-edit" ></i></a></h5><div class="blog-one-img col-md-3 col-sm-3 col-xs-5"><div class="image-style-one"><img style="height:120px;width:130px;border:1px solid #000000;padding:5px" src="img/logo.png" class="img-responsive"></div></a><h6 style="margin-top:18px"> <i class="fa fa-phone red"></i>'+val.phone_no+'</h6></div><div class="blog-one-content col-md-9 col-sm-9 col-xs-7"><p style="text-align:justify;margin-top:20px">'+val.title+'</a> </p><h6 style="color:green"> Price : '+val.cost+'</h6><h6> <i class="fa fa-envelope-o orange"></i> '+val.email+'</h6></div></div></div></div>';
+                $("#griddiv").append(html);
+                })
+                });
+
+    }
+    
+
 </script>
+
+
+
+
+
+
 <div id="signin-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
 
         <div class="modal-dialog">
@@ -572,13 +602,13 @@ $("#frmsingup").submit(function(e){
                                 <label for="user" class="col-sm-3 control-label">Email</label>
                                 <div class="col-sm-9">
                                     <!-- Input -->
-                                    <input type="text" class="form-control" name="useremail"  id="email1" placeholder="Email">
+                                    <input type="text" class="form-control" id="email1" name="useremail" placeholder="Email">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="col-sm-3 control-label">Password</label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control" name="password" id="pwd1"  placeholder="Password">
+                                    <input type="password" class="form-control" id="pwd1" name="password" placeholder="Password">
                                 </div>
                             </div>
                                                         <div class="form-group">
@@ -597,7 +627,8 @@ $("#frmsingup").submit(function(e){
                                 </div>
                             </div>
                             <div class="col-sm-offset-3 col-sm-9">
-                             <title>UdyogMission       | List Business</title>
+                                <a href="" class="black">Forgot Password ?</a> 
+                                                                | <a href="signup.html" class="black">Sign Up</a>
                                                             </div>
                         </form>
                         <br>
@@ -620,14 +651,7 @@ $("#frmsingup").submit(function(e){
 
     </div>
 
-
-
-
-
-
-
-    
-     <div id="signup-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div id="signup-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
 
         <div class="modal-dialog">
 
@@ -673,7 +697,7 @@ $("#frmsingup").submit(function(e){
                     <div class="form-group">
                         <label for="email" class="col-sm-3 control-label">Email <span class="text-danger">*</span></label>
                         <div class="col-sm-9">
-                            <input type="email" name="useremail" value="" id="email" placeholder="Email" class="form-control">
+                            <input type="text" name="useremail" value="" id="email" placeholder="Email" class="form-control">
                                                     </div>
                     </div>
 
@@ -733,3 +757,4 @@ $("#frmsingup").submit(function(e){
         <!-- /.modal-dialog -->
 
     </div>
+

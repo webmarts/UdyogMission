@@ -39,7 +39,8 @@ function onDeviceReady(){
     // alert(data);
      navigator.notification.alert(
                     
-                    data.title,           // title
+                    data.title,
+                    data.city,           // title
                     'Ok'                  // buttonName
             );
      document.location.href='requirement.html'

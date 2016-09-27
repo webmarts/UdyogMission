@@ -54,6 +54,9 @@
         
     }
 
+    
+
+
     .real-estate .re-big-form{
         padding: 15px 0 0 0;
                 background: #9fee9b;        
@@ -117,7 +120,57 @@
    
    background-color:#ffd700;
 }
-        
+   
+ .circle-one  {
+  
+   background-color:#ff4265;
+}
+
+.circle-two  {
+  
+   background-color:#376182;
+}
+
+
+.circle-three  {
+   
+   background-color:#1075bc;
+}
+
+.circle-four  {
+  
+   background-color:#ff4265;
+}
+
+.circle-five  {
+  
+   background-color:#ffa500;
+}
+
+
+.circle-six  {
+   
+   background-color:#8a2be2;
+}
+
+.circle-seven  {
+  
+   background-color:#6dc066;
+}
+
+.circle-eight  {
+  
+   background-color:#66cccc;
+}
+
+
+.circle-nine  {
+   
+   background-color:#ffd700;
+}
+
+
+       
 </style>
 
 </head>
@@ -156,93 +209,154 @@
     <!-- Container -->
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-3">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <!-- Logo section -->
-                  <div class="logo">
-                        <div class="row">
-                          <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1">
-                         <h3><a href="index.html"><img src="img/logo-default.png" alt="Logo" style="height:63px"></a></h3>
-
-                          </div>
-                         <div class="col-md-11 col-sm-11 col-xs-11 col-lg-11">
-                         <strong> <h2 style="color:red;text-align:center;margin-top:15px">  UdyogMission </h2></strong>
-                         </div>
-
-                         </div>
-
-                   </div>
-                
-            </div>
-            <div class="col-md-9 col-sm-9">
-
-                <!-- Navigation starts.  -->
-                <div class="navy">
-                    <ul class="pull-right">
-                        
-
-
-                        <li class="">
-
-                        <a href="index.html">Home</a>
-
-                    </li><li class="">
-
-                        <a href="login.html" id='list_business'>List Business</a>
-
-                    </li><li class="">
-
-                        <a href="advance_search.html">Advanced Search</a>
-
-                 </li>
                  
-                  <li class="">
+  <div id="mySidenav" class="sidenav">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+   <ul class="pull-left"  style="list-style-type:none !important"  >
+                       
 
-                       <a href="#" class="dropdown-toggle myaccount" data-toggle="dropdown">My Account</a>
-<ul>
-<li class=" -child">
-<a href="show_listing.html">Edit Business Listing</a>
-</li>
-<li class=" -child">
-<a href="show_requirement.html">Edit Requirement</a>
-</li>
-</ul>
 
-                   </li>
+                       <li class="" >
+
+                       <a href="index.html">  <i class="fa fa-home" style="color:#ffd700;font-size:25px;margin-right:10px"></i> Home</a>
+
+                   </li> 
+
+
+
+
+                   <li class="" >
+
+                       <a href="login.html" id='list_business'> <i class="fa fa-briefcase"style="color:#ffd700;font-size:25px;margin-right:10px" > </i> List Business</a>
+
+                   </li><li class="">
+
+                       <a href="advance_search.html"> <i class="fa fa-search"style="color:#ffd700;font-size:25px;margin-right:10px"> </i>    Advanced Search</a></li>
+                       
+                                          <li class="">
+                         <a class="signup" id='signup'>
+                          <i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"> </i> Signup</a>
+                       </li>
+                      
+ 
+
+ <li class="myaccount">
+
+<div class="dropdown" style="margin:5px;padding:5px">
+   <button class="dropdown-toggle" id="menu1" type="button" data-toggle="dropdown" style="background:transparent !important ;color:#ffffff !important ;border:none;font-size:18px;"  ><i class="fa fa-key"style="color:#ffd700;font-size:25px;margin-right:10px" > </i>  My Account
+   <span class="caret"></span></button>
+   <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style="background-color:rgba(100,100,100,0.2);color:#ffffff !important;position:relative; width:100% !important; margin-bottom:20px">
+     <li role="presentation"><a role="menuitem" tabindex="-1" href="show_listing.html" style="color:#ffffff !important;font-size:18px"><i class="fa fa-edit"style="color:#ffd700;font-size:25px;margin-right:10px" > </i> Edit Business Listing</a></li>
+     <li role="presentation"><a role="menuitem" tabindex="-1" href="show_requirement.html" style="color:#ffffff !important"><i class="fa fa-edit"style="color:#ffd700;font-size:25px;margin-right:10px" > </i> Edit Requirement</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="show_product.html" style="color:#ffffff !important"><i class="fa fa-edit"style="color:#ffd700;font-size:25px;margin-right:10px" > </i> Edit Product</a></li>
+     
+   </ul>
+ </div>
+
+                  </li>
                    <li class="">
-                          <a class="post_requirement" id='post_requirement' href="requirement.html">Requirement</a>
-                        </li>
-                          <li class="">
-                          <a class="signup" id='signup'>Signup</a>
-                        </li>
+                         <a class="post_requirement" id='post_requirement' href="requirement.html"><i class="fa fa-th-large"style="color:#ffd700;font-size:25px;margin-right:10px"> </i>Requirement</a>
+                       </li>
                          <li class="">
-                           <a class="signin" id="login">Signin</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-                <!-- Navigation ends -->
-
-            </div>
-        </div>
-    </div>
+                          <a class="signin" id="login"> 
+                            <i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"> </i> Signin</a>
+                       </li> 
+                       
+                       
+                   </ul>
 </div>
 
+<div class="container-fluid">
+   <div class="row">
+       <div class="col-md-12 text-center">
+           <div class="row">
+               <div class="col-xs-1">
+                   <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
+               </div>
+               <div class="col-xs-10  col-md-10 ">
+                 
+                   <h3><a href="index.html"><img src="img/logo-default.png" alt="Logo" style="height:63px"></a> <span style="color:red"  >  
+                     UdyogMission
 
-
+                   </span>  </h3>
+               </div>
+               </div>
+              
+           </div>
+        
+       </div>
+   </div>
+</div>
 
 
 
 <div class="container">
 
-	<div class="block-heading-two">
-
-    <h3 align='center'><div id='heading'>Categories</div></h3>
-</div>
 
 
 
-    <div class="counter-four">
-    <div class="counter-content parent_cat">
+<div class="row">
+           <div class="col-md-12 col-sm-12 col-xs-12">
+
+<!-- Nav tab style 1 starts -->
+<div class="nav-tabs-one"><!-- Nav tabs -->
+  <div id="buttons">
+    <ul class="nav nav-tabs" >
+    <li class="active"><a href="#p-nav-1" data-toggle="tab">Directory</a></li>
+    <li><a href="#p-nav-2" data-toggle="tab">Requirement</a></li>
+    <li class="review-tab"><a href="#p-nav-3" data-toggle="tab">Shop</a></li>
+  </ul>
+  </div><!-- Tab content --><br>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="p-nav-1">
+      <div class="single-property"><!-- Tab content -->
+        <div class="counter-four">
+          <div class="counter-content parent_cat"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-9 col-sm-12 col-xs-12 parent_cat1"></div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  <br><br>
+
+<div class="tab-pane fade" id="p-nav-2">
+  <div class="single-property sp-agent">
+    <div class="clearfix"></div>
+      <div class="blog-two"><link href="css/select2.css" rel="stylesheet"><script src="js/select2.js"></script>
+        <div class="row" align="center"><!-- Sidebar column -->
+          <div class="col-md-3 col-sm-3">
+            <div class="sidebar">
+              <div class="s-widget"><h5 align='center'><i class="fa fa-search color"></i>&nbsp; Search Filters</h5><!-- Form Group -->
+                <div align='center' class="widget-content search">
+                  <div class="form-group"><select name="city" id="city" class="form-control" tabindex="-1" ></select>
+                  </div>
+                  <div class="form-group"><select name="category" id="category" class="form-control" tabindex="-1" ></select>
+                  </div><!-- Button --><button class="btn submit-search-button" type="submit" onClick="fetch_result()" style="background-color:#32c8de;color:#ffffff">Search</button>&nbsp;<button class="btn btn-default reset" type="reset">Reset</button>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end of left bar --><!-- Mainbar column --><hr>
+          <div class="col-md-9 col-sm-9" align="left"><h5><span style="position:relative;top:5px;">Results</span>
+            <div class="pull-right list-switcher"></div></h5>
+            <div class="row">
+              <div class="col-md-9 col-sm-12 col-xs-12 parent_cat2"><span class="recent-post"><div class="blog-one" id="griddiv2"></div></span>
+            </div>
+          </div>
+          <div class="clearfix"></div></span>
+          <div class="ajax-loading recent-loading2" style='display:none;'><img src="img/loading.gif" alt="loading..."></div><a href="" class="load-more-recent2 btn btn-blue" style="width:100%">Load More</a></div> <!-- end of main content -->
+        </div><!-- Tab content -->
+      </div>
+    </div>
+  </div>
+   
+                                                        
+  <div class="tab-pane fade" id="p-nav-3">
+      <div class="counter-four">
+    <div class="counter-content parent_cat3">
    
           </div>  
 
@@ -250,7 +364,7 @@
 
 
     <div class="row">
-    <div class="col-md-9 col-sm-12 col-xs-12 parent_cat1">
+    <div class="col-md-9 col-sm-12 col-xs-12 parent_cat4">
         
         
         
@@ -264,8 +378,11 @@
 
 </div>
 </div>
-	
 
+</div>
+</div>
+	
+</div>
 
 <br>
 <div class="footer navbar-fixed-bottom" style="background-color:black;color:white;" >
@@ -315,11 +432,18 @@
    
 <script type="text/javascript">
 
+    function openNav() {
+       document.getElementById("mySidenav").style.width = "100%";
+   }
 
+   function closeNav() {
+       document.getElementById("mySidenav").style.width = "0";
+   }
 
 $(function(){
 
-  
+
+
     $('.signin').click(function(){
        
         $('#signin-modal').modal('show');
@@ -336,7 +460,7 @@ $(function(){
     // });
 });
 
-
+ $(".dropdown-toggle").dropdown();
 
 
 $(document).ready(function(){
@@ -345,28 +469,29 @@ var user = window.localStorage["username"];
 
     
     
-    if(user=="" || !user)
+         if(user=="" || !user)
     {
        $('#list_business').attr('href','login.html');
         $('#login').addClass('signin');
          $('#login').removeAttr('href');
-         $('#login').html('Signin')
+         $('#login').html('<i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"></i>Signin')
            $('#post_requirement').hide();
          $('#signup').show();
-		 $('.myaccount').hide();
+     $('.myaccount').hide();
 
     }
     else
     {
           $('#post_requirement').show();
          $('#signup').hide();
-		$('.myaccount').show();
+    $('.myaccount').show();
 
         $('#list_business').attr('href','subscribe.html');
         $('#login').removeClass('signin');
         $('#login').attr('href','logout.html');
-        $('#login').html('Logout')
+         $('#login').html('<i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"></i>Logout')
     }
+
 
      var url = location.href;
      
@@ -375,7 +500,10 @@ var user = window.localStorage["username"];
      else
      {
  fetch_category();       
-
+fetch_all_category();
+fetch_city()
+fetch_result();
+fetch_shop_category();
      }
     
      
@@ -384,8 +512,10 @@ var user = window.localStorage["username"];
      else
      {
  fetch_category();       
- 
-
+ fetch_shop_category()
+fetch_all_category();
+fetch_city()
+fetch_result();
      }
     
      if(dataxx!=undefined)   
@@ -406,6 +536,8 @@ var user = window.localStorage["username"];
      if(str=='city')
      fetch_post_by_city(val)
      }
+
+
 
 
      window.localStorage['plainkey']='';
@@ -798,6 +930,244 @@ var html='<div class="col-md-4 col-sm-4 col-xs-4" ><div class="counter-item '+va
         {
             document.location.href="post.html?id="+val;
         }
+
+
+        function fetch_all_category()
+        {
+
+         var html='<option value="any">Any Category</option>'
+
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_categories",
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+             
+              $.each(obj, function(key,val) {
+                if(val.parent!=0)
+                var title='--'+val.title
+                else
+                var title=val.title
+
+              html+='<option value='+val.id+'>'+title+'</option>'
+              
+
+             
+                })
+             $('#category').append(html);
+             
+          });
+
+        }
+
+       
+       function fetch_city()
+        {
+
+         var html='<option value="any">Any City</option>'
+
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_cities",
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+              
+              $.each(obj, function(key,val) {
+                var selected='';
+                  if(window.localStorage['city']!='')
+                   if(window.localStorage['city']==val.id)
+                    selected='selected';
+
+              html+='<option value="'+val.id+'"'+selected+'>'+val.name+'</option>'
+              
+
+             
+                })
+             $('#city').append(html);
+             
+          });
+               
+        }
+
+       
+
+        function fetch_child_category(val)
+        {
+
+        
+
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_child_categories/"+val,
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+              console.log(obj)
+              $.each(obj, function(key,val) {
+                var html="<a><li>"+val.title+"("+val.count+")</li></a>";
+                $('.parent_ul[ul-id='+val.parent+']').append(html);
+                })
+
+          });
+
+        }
+var per_page2 = '6';
+    var recent_count2 = '6';
+
+     $('.load-more-recent2').click(function(e){
+      e.preventDefault();
+      var next2 = parseInt(recent_count2)+parseInt(per_page2);
+
+      var url2 = "http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_requirement/"+next2
+      /*url = url.replace('/'+recent_count,'/');*/
+      recent_count2 = next2;
+   fetch_result(url2);
+  });
+
+    function fetch_result(url)
+    {
+       
+        var city=$('#city').val();
+       
+        var category=$('#category').val();
+       
+         if(url==undefined)
+        {
+         url="http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_requirement/6";   
+        }
+        /*console.log(url)*/
+        // console.log(city)
+         $.post(url,{city:city,category:category},
+            function(data, status){
+                 $("#griddiv2").html('');
+                  var obj = JSON.parse(data);
+                  console.log(obj)
+                  if(obj.length==0)
+                  {
+                  $("#griddiv2").html('No result found');
+                   $('.load-more-recent2').hide();
+                  }
+
+
+                  if(obj[0].lastid==obj.length)
+                   {
+                        $('.load-more-recent2').hide();
+                   }
+                   else
+                   {
+                          $('.load-more-recent2').show();
+                   }
+              
+
+              $.each(obj, function(key,val) {
+                
+
+                
+                var category=val.category[0];
+                var city=val.city[0];
+             
+                var rating='';
+
+                
+
+              
+               
+                
+                    
+               var html='<div class="blog-one-item row"><div class="blog-one-content col-md-12 col-sm-12 col-xs-12"><h4 style="word-wrap:break-word;"><a  onclick="viewreq('+val.id+')">'+val.title+'</a></h3><p id="restrict">'+(val.description).substring(0,20)+'....'+'</p><div class="blog-meta"><span style="color:black"><i class="fa fa-tag" style="color:black"></i>&nbsp;<b>'+category.title+'</span></b><br><i style="color:green" class="fa fa-envelope"></i>&nbsp;<a href="mailto:'+val.email+'"target="_top">&nbsp;'+val.email+'</a><br><i class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+' &nbsp;<a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
+                $("#griddiv2").append(html);
+                })
+                });
+
+    }   
+
+    function viewreq(val)
+    {
+      document.location.href='single_requirement.html?id='+val;
+    }
+
+
+function fetch_shop_category()
+{
+   $('.parent_cat3').html('');
+         
+   $('.parent_cat4').html('');
+        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_product_categories",
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+              console.log(obj)
+              $.each(obj, function(key,val) {
+              
+                
+var html='<div class="col-md-4 col-sm-4 col-xs-4" ><div class="counter-item '+val.icon_class+'"><a onClick="fetch_product_by_category('+val.id+')"><img src="img/'+val.icon_img+'" style="margin-top:20px;"></a></div><center><h6 style="color:#277ead;height:200px;" >'+val.name+'</h6></center></div></div>'
+
+
+              $('.parent_cat3').append(html);
+              
+                })
+
+          });
+
+}
+  
+
+function fetch_product_by_category(category)
+        {
+            $('#cattop').css('display','block');
+
+            $('#cattop a').attr('href','post_requirement.html?category='+category);
+         $('.parent_cat3').html('');
+         $('.parent_cat4').html('');
+        var htmldata='<span class="recent-post"><div class="blog-one" id="griddiv3"></div></span><div class="ajax-loading recent-loading"><img src="img/loading.gif" alt="loading..."><a href="" class="load-more-recent3 btn btn-blue" style="width:100%">Load More</a></div>';
+         $('.parent_cat4').html(htmldata);
+
+        var url="http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_product/6";   
+        
+        /*console.log(url)*/
+         $.post(url,{category:category},
+            function(data, status){
+              
+            
+                  var obj = JSON.parse(data);
+                  console.log(obj)
+                  if(obj.length<=0)
+                  {
+                  $("#griddiv3").html('No result found');
+                  }
+
+
+                  if(obj[0].lastid==obj.length)
+                   {
+                        $('.load-more-recent3').hide();
+                   }
+                   else
+                   {
+                    $('.load-more-recent3').show();
+                   }
+
+                    $("#heading").html('<a href="index.html"><i style="color:white;background-color:#32c8de;padding:10px;border-radius:50%" class="fa fa-home"></i></a>  Category : '+obj[0].category[0].name)    
+              $.each(obj, function(key,val) {
+               
+              
+                var category=val.category[0];
+                var city=val.city[0];
+               
+
+                  var html='<div class="blog-one-item row"><h5 align="left" style="word-wrap:break-word;margin-left:15px"> <a onclick="viewshop('+val.id+')">'+val.title+'</a></h5>  <div class="blog-one-img col-md-3 col-sm-3 col-xs-4"><a onclick="viewshop('+val.id+')"><div class="image-style-one"><img style="height:120px;width:130px;border:1px solid #000000;padding:5px" class="img-responsive" alt="'+val.title+'"  src="img/logo.png"></div></a></div><div align="left" class="blog-one-content col-md-9 col-sm-9 col-xs-8"> <a style="color:black"  onclick="fetch_post_by_category('+category.id+')"><i style="color:black" class="fa fa-tag"></i>&nbsp;<b>'+category.name+'</b></a> &nbsp; <br> <a style="color:black" onclick="fetch_post_by_city('+city.id+')"><i  class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+'</a><br><a href="mailto:'+val.email+'"   target="_top"><i style="color:green" class="fa fa-envelope"></i>&nbsp;'+val.email+'</a> &nbsp;<br><a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
+               $('#griddiv3').append(html);
+       
+           
+            
+                })
+                });
+
+
+
+        }
+
+
+        function viewshop(val)
+        {
+          document.location.href='single_product.html?id='+val
+        }
+ 
 </script>
 
 

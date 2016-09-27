@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="css/jquery.ezdz.min.css">
       
     <script src="js/jquery-2.1.1.min.js"></script>
+ <script src="js/main.js"></script>
+   <script src="dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 
     <script src="js/jquery.ezdz.min.js"></script>
- <script src="dist/sweetalert.min.js"></script>
-<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
-     <script src="js/main.js"></script>
     <!-- Styles -->
     <!-- Bootstrap CSS -->
     <style type="text/css">
@@ -75,13 +75,7 @@
 <div class="top-bar">
     <div class="container">
 
-        <!-- Contact starts -->
         
-        <!-- Contact ends -->
-        
-
-       
-
         <!-- Search section for responsive design -->
         <!--div class="tb-search pull-left">
             <a href="#" class="b-dropdown"><i class="fa fa-search square-2 rounded-1 bg-color white"></i></a>
@@ -96,12 +90,7 @@
                 </form>
             </div>
         </div-->
-        <!-- Search section ends -->
-
-        <!-- Social media starts -->
         
-        <!-- Social media ends -->
-
         <div class="clearfix"></div>
     </div>
 </div>
@@ -115,7 +104,7 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <!-- Logo section -->
-                <div id="mySidenav" class="sidenav">
+               <div id="mySidenav" class="sidenav">
    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
    <ul class="pull-left"  style="list-style-type:none !important"  >
                        
@@ -139,11 +128,12 @@
                        <a href="advance_search.html"> <i class="fa fa-search"style="color:#ffd700;font-size:25px;margin-right:10px"> </i>    Advanced Search</a></li>
 
 
+
                                            <li class="">
                          <a class="signup" id='signup'>
                           <i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"> </i> Signup</a>
                        </li>
-                      
+                       
 
 
  <li class="myaccount">
@@ -158,16 +148,17 @@
      
    </ul>
  </div>
+
                   </li>
                    <li class="">
                          <a class="post_requirement" id='post_requirement' href="requirement.html"><i class="fa fa-th-large"style="color:#ffd700;font-size:25px;margin-right:10px"> </i>Requirement</a>
                        </li>
-                        <li class="">
+                        
+                       
+                      <li class="">
                           <a class="signin" id="login"> 
                             <i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"> </i> Signin</a>
-                       </li>a  
-                       
-                       
+                       </li>  
                    </ul>
 </div>
 
@@ -195,40 +186,45 @@
 
 
 
+
+
 <!-- Main content starts -->
 <div class="main-block">
-    <!-- Page heading two starts -->
     
-
 <!-- Container -->
 <div class="container">
 
         <form class="form-horizontal" name='frmpost' id='frmpost'>
-        <div class="row">
-                                    <div class="col-md-12 col-sm-12">
+    
                 <!-- Shopping items content -->
                 <div class="shopping-content">
                     <div class="shopping-checkout">
-                        <!-- Heading   <h4>Basic Info</h4>-->
-                          
+                        <!-- Heading -->
+                            <h4>Basic Info</h4>
                             <hr>
-                            <div id="review-msg"></div>
+                          
 
-                             <div class="form-group">
-                                <label class="col-md-3 control-label" for="inputEmail1">Category</label>
+ <div class="form-group">
+                                <label class="col-md-3 control-label">Category</label>
                                 <div class="col-md-8">
-                                    <select name="category" id='category' class="form-control">
-                                        <option value="">Select Category</option>
-                                                                                  
+                                    <select name="category" id="category" class="form-control">
+                                        <option value="1">Select Category</option>
+                                             <option value="2">Clothing</option>
+                                        <option value="3"> Home & Living</option>
+                                         <option value="4">Kitchen & Diving</option>
+                                        <option value="5">Electronics</option>  
+                                        <option value="6">Stationery & Craft</option>  
+                                              <option value="7">Book Music & Entertainment</option>
+                                                <option value="8">Sports & Fitness</option>
+                                                                                          
                                                                             </select>
                                                                     </div>
                             </div>
 
-
-                            <div class="form-group">
+                         <div class="form-group">
                             <label class="col-md-3 control-label">Title</label>
                             <div class="col-md-8">
-                                                                <input type="text" id="title" name="title"  value="" class="form-control" maxlength='45' placeholder="max title size 45 charcters only">
+                                                                <input type="text" id="title" name="title" maxlength="45" placeholder=" Max title size 45 characters only" value="" class="form-control">
                                                             </div>
                         </div>
 
@@ -236,13 +232,29 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label">Description</label>
                             <div class="col-md-8">
-                            <textarea rows="5" name="description" class="form-control" id="description" aria-hidden="true" ></textarea>
+                            <textarea rows="5" name="description" class="form-control rich" id="description" aria-hidden="true" ></textarea>
                                                             </div>
                         </div>
 
+                    
+                   
 
-                      
-                            <div class="form-group">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Cost</label>
+                            <div class="col-md-8">
+                                                                <input id="cost" type="text" name="cost" placeholder="Price" value="" class="form-control">
+                                                            </div>
+                        </div>                           
+
+                         <div class="form-group">
+                            <label class="col-md-3 control-label">Price</label>
+                            <div class="col-md-8">
+                                                                <input id="phone_no" type="text" name="phone_no" placeholder="Phone No" value="" class="form-control">
+                                                            </div>
+                        </div>
+
+                     
+                       <div class="form-group">
                                 <label class="col-md-3 control-label">State</label>
                                 <div class="col-md-8">
                                     <select name="state" id="state" class="form-control" onchange="fetch_city()"><option value="">Select One</option></select>
@@ -255,58 +267,60 @@
                                                                         <select name="city" id="city" class="form-control"><option value="">Select One</option></select>
                                                                                                         </div>
                             </div>
-                            <div class="form-group">
-                            <label class="col-md-3 control-label">Email</label>
-                            <div class="col-md-8">
-                                                                <input id="email" type="text" name="email" placeholder="Email" value="" class="form-control">
-                                                            </div>
-                        </div>
 
-                          <div class="form-group">
+                      <div class="form-group">
                             <label class="col-md-3 control-label">Phone</label>
                             <div class="col-md-8">
                                                                 <input id="phone_no" type="text" name="phone_no" placeholder="Phone" value="" class="form-control">
                                                             </div>
                         </div>
-                           
 
                         
-                    </div>
-                </div>
-            </div>
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Email</label>
+                            <div class="col-md-8">
+                                                                <input id="email" type="text" name="email" placeholder="Email" value="" class="form-control">
+                                                            </div>
+                        </div>
+                            
+                           
+
            
-        </div>
+
+                            
+            
+                    
+                       
+
 
         <div class="row">
             <div class="col-md-12">
                 <hr>
                 <div class="form-group" style="text-align:center">
-                    <button class="btn btn-color" type="submit">Update</button>
-                    <button class="btn btn-default" type="reset">Reset</button><br><br>
+                    <button class="btn btn-color" id="btn_alert"  type="submit">Save</button>
+                    <button class="btn btn-default" type="reset">Reset</button>
                 </div>
             </div>
-
         </div>
     </form>
 </div>
 </div>
-<br>
-<br>
+<!-- Main content ends -->
+<!-- Footer Starts -->
+<br><br>
 <div class="footer navbar-fixed-bottom" style="background-color:black;color:white;" >
     <!-- Container -->
     <div class="container">
         <!-- Footer Content -->
             <!-- Paragraph -->
             <center>
-            <p>UdyogMission 2016, all rights reserved | Developed by <a href="http://www.webmarts.in">Webmart </a> support@bramhodyogexpo.in </p>
+            <p>UdyogMission 2016, all rights reserved <br> Developed by <a href="http://www.webmarts.in">Webmart </a> support@bramhodyogexpo.in </p>
             </center>
             
             <div class="clearfix"></div>
     </div>
 </div>
-
-
-
 
 </div>
     <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
@@ -320,18 +334,109 @@
 
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
-    
+    <!-- Placeholders JS -->
+   
     <!-- Magnific Popup -->
     <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Owl carousel -->
     
+  
+
+    <!-- Main JS -->
+   
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-  
+    <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="js/jquery.iframe-transport.js"></script>
+    <script type="text/javascript" src="js/jquery.fileupload.js"></script>
+      
+
 <script type="text/javascript">
 
-  
-   function openNav() {
+
+
+</script>
+
+<div id="signin-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                    <h4 class="modal-title" id="myModalLabel">Login to your Account </h4>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Login starts -->
+                    <div class="well login-reg-form">
+
+                        <!-- Form -->
+                        <form  class="form-horizontal" role="form" id='frmlogin' name='frmlogin'>
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <!-- Label -->
+                                <label for="user" class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-9">
+                                    <!-- Input -->
+                                    <input type="text" class="form-control" id="email1" name="useremail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-sm-3 control-label">Password</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" id="pwd1" name="password" placeholder="Password">
+                                </div>
+                            </div>
+                                                        <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Remember Me                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <!-- Button -->
+                                    <button type="submit" class="btn btn-red">Login</button>&nbsp;
+                                    <button type="reset" class="btn btn-white">Reset</button>
+                                </div>
+                            </div>
+                            <div class="col-sm-offset-3 col-sm-9">
+                             <title>UdyogMission       | List Business</title>
+                                                            </div>
+                        </form>
+                        <br>
+                                            </div>
+                    <!-- Login ends -->
+
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+
+            <!-- /.modal-content -->
+
+        </div>
+
+        <!-- /.modal-dialog -->
+
+    </div>
+
+
+<script type="text/javascript">
+
+ function openNav() {
        document.getElementById("mySidenav").style.width = "100%";
    }
 
@@ -339,15 +444,34 @@
        document.getElementById("mySidenav").style.width = "0";
    }
 
-  $(".dropdown-toggle").dropdown();
+$(function(){
+
   
+    $('.signin').click(function(){
+       
+        $('#signin-modal').modal('show');
+    });
+
+
+    $('.signup').click(function(){
+       
+        $('#signup-modal').modal('show');
+    });
+
+    // jQuery(window).resize(function(){
+    //    console.log(jQuery(window).width()); 
+    // });
+});
+
+ $(".dropdown-toggle").dropdown();
+
 $(document).ready(function(){
 
 var user = window.localStorage["username"];
 
     
     
-       if(user=="" || !user)
+     if(user=="" || !user)
     {
        $('#list_business').attr('href','login.html');
         $('#login').addClass('signin');
@@ -371,20 +495,9 @@ var user = window.localStorage["username"];
     }
 
 
+    fetch_state()
 
 
-
-
-
-
-     window.localStorage['plainkey']='';
-      window.localStorage['city']='';
-       window.localStorage['category']='';
-        window.localStorage['sort_by']='';
-
-    
-fetch_all_category();
-fetch_state()
 
  
  var url = location.href;
@@ -396,7 +509,7 @@ fetch_state()
      var post_id = datayy[1];
 
 
-      $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_requirement_by_id",
+      $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_product_by_id",
     {
         id:post_id
     },
@@ -408,7 +521,7 @@ fetch_state()
         $('#description').val(obj.description)
         $('#phone_no').val(obj.phone_no)
         $('#email').val(obj.email)
-        $('#website').val(obj.website)
+        $('#cost').val(obj.cost)
         $('#state').val(obj.state)
         $('#category').val(obj.category)
            
@@ -417,65 +530,7 @@ fetch_state()
 
 
 
-$("#frmlogin").submit(function(e){
-      e.preventDefault()
-    flag=true;
-    $("#frmlogin input").removeClass("text-danger")
-             if(flag==true && $("#email1").val()=="")
-           {
-               $("#email1").addClass('text-danger')
-               alert('Please Enter Email')
-               
-               $("#email1").focus()
-               flag=false;
-           }
-           
-           if(flag==true && $("#pwd1").val()=="")
-           {
-               $("#pwd1").addClass('text-danger')
-               alert('Please Enter Password')
-               $("#pwd1").focus()
-               flag=false;
-           }
-            if (flag==true)
-            {
-                console.log("start")
-                var senddata = $("#frmlogin").serialize()
-                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/login",senddata)
-                .done(function(data){
-                     try{
-                        var jsondata = $.parseJSON(data)
-                        console.log(jsondata)
-                        if(jsondata.status=='true')
-                        {
-                                
-                         
-                            window.localStorage["username"] = jsondata.email;
-                            window.localStorage["id"] = jsondata.userid;  
-                            document.location.href="subscribe.html";   
-                            /*location.reload();*/
-                        }
-                        else
-                        {
-                            
-                           alert(jsondata.reason);
-                        }
-                     }
-                     catch(e){}
 
-                })
-                .fail(function(){
-                    console.log("fail");
-                })
-
-            }
-            else
-            {
-                $("#regmsg").html("  Please Fill The all form ")
-            }
-
-    
-    })
 
 $("#frmsingup").submit(function(e){
       e.preventDefault()
@@ -592,6 +647,65 @@ $("#frmsingup").submit(function(e){
 
     
     })
+$("#frmlogin").submit(function(e){
+      e.preventDefault()
+    flag=true;
+    $("#frmlogin input").removeClass("text-danger")
+            if(flag==true && $("#email1").val()=="")
+           {
+               $("#email1").addClass('text-danger')
+               alert('Please Enter Email')
+               
+               $("#email1").focus()
+               flag=false;
+           }
+           
+           if(flag==true && $("#pwd1").val()=="")
+           {
+               $("#pwd1").addClass('text-danger')
+               alert('Please Enter Password')
+               $("#pwd1").focus()
+               flag=false;
+           }
+            if (flag==true)
+            {
+                console.log("start")
+                var senddata = $("#frmlogin").serialize()
+                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/login",senddata)
+                .done(function(data){
+                     try{
+                        var jsondata = $.parseJSON(data)
+                        console.log(jsondata)
+                        if(jsondata.status=='true')
+                        {
+                                
+                         
+                            window.localStorage["username"] = jsondata.email;
+                            window.localStorage["id"] = jsondata.userid;  
+                            document.location.href="subscribe.html";   
+                            /*location.reload();*/
+                        }
+                        else
+                        {
+                            
+                           alert(jsondata.reason);
+                        }
+                     }
+                     catch(e){}
+
+                })
+                .fail(function(){
+                    console.log("fail");
+                })
+
+            }
+            else
+            {
+                $("#regmsg").html("  Please Fill The all form ")
+            }
+
+    
+    })
 
 $("#frmpost").submit(function(e){
       e.preventDefault()
@@ -603,6 +717,7 @@ $("#frmpost").submit(function(e){
             var city=$('#city').val();
             var title=$('#title').val();
             var description=$('#description').val();
+            var cost=$('#cost').val();
             var user_id=window.localStorage['id'];
 
             if(flag==true && $("#category").val()=="")
@@ -673,7 +788,7 @@ $("#frmpost").submit(function(e){
          if (flag==true)
             {
                 console.log("start")
-                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/update_requirement",
+                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/update_product",
             {
                 user_id:user_id,
                 category:category,
@@ -683,6 +798,7 @@ $("#frmpost").submit(function(e){
                 city:city,
                 title:title,
                 description:description,
+                cost:cost,
                 id:post_id
             },
             function(data, status){
@@ -700,46 +816,17 @@ $("#frmpost").submit(function(e){
                                       
                                    // $('#review-msg').html('<div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Your requirement is posted</div>')
 
-                                   swal("You requirement is updated") 
-                              window.location.href='requirement.html';
+                                   swal("You product is posted") 
+                              window.location.href='list_product.html';
 
                                 }
                 })
         }
     })
 
-}); 
+ });
 
-     function fetch_all_category()
-        {
-
-         
-var html='<option value="any">Any Category</option>'
-
-        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_categories",
-           
-            function(data, status){
-              var obj = JSON.parse(data);
-             
-              $.each(obj, function(key,val) {
-                if(val.parent!=0)
-                var title='--'+val.title
-                else
-                var title=val.title
-
-              html+='<option value='+val.id+'>'+title+'</option>'
-              
-
-             
-                })
-             $('#category').append(html);
-             
-          });
-
-        }
-
-       
-       function fetch_state()
+function fetch_state()
         {
             
 
@@ -764,7 +851,9 @@ var html='<option value="any">Any Category</option>'
 
         }
 
- function fetch_city(city)
+
+
+         function fetch_city(city)
         {
             var val=$("#state").val();
 
@@ -793,107 +882,13 @@ var html='<option value="any">Any Category</option>'
 
         }
    
-       
 
-        function fetch_child_category(val)
-        {
-
-        
-
-        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_child_categories/"+val,
-           
-            function(data, status){
-              var obj = JSON.parse(data);
-              console.log(obj)
-              $.each(obj, function(key,val) {
-                var html="<a><li>"+val.title+"("+val.count+")</li></a>";
-                $('.parent_ul[ul-id='+val.parent+']').append(html);
-                })
-
-          });
-
-        }
-
-
-        
-
+     
+ 
 </script>
 
-<div id="signin-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
 
-        <div class="modal-dialog">
 
-            <div class="modal-content">
-
-                <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-
-                    <h4 class="modal-title" id="myModalLabel">Login to your Account </h4>
-
-                </div>
-
-                <div class="modal-body">
-
-                    <!-- Login starts -->
-                    <div class="well login-reg-form">
-
-                        <!-- Form -->
-                        <form  class="form-horizontal" role="form" id='frmlogin' name='frmlogin'>
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <!-- Label -->
-                                <label for="user" class="col-sm-3 control-label">Email</label>
-                                <div class="col-sm-9">
-                                    <!-- Input -->
-                                    <input type="email" class="form-control" id="email1" name="useremail" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="col-sm-3 control-label">Password</label>
-                                <div class="col-sm-9">
-                                    <input type="password" class="form-control" id="pwd1" name="password" placeholder="Password">
-                                </div>
-                            </div>
-                                                        <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Remember Me                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    <!-- Button -->
-                                    <button type="submit" class="btn btn-red">Login</button>&nbsp;
-                                    <button type="reset" class="btn btn-white">Reset</button>
-                                </div>
-                            </div>
-                            <div class="col-sm-offset-3 col-sm-9">
-                                <a href="" class="black">Forgot Password ?</a> 
-                                                                 <a href="signup.html" class="black">Sign Up</a>
-                                                            </div>
-                        </form>
-                        <br>
-                                            </div>
-                    <!-- Login ends -->
-
-                </div>
-
-                <div class="modal-footer">
-
-                </div>
-
-            </div>
-
-            <!-- /.modal-content -->
-
-        </div>
-
-        <!-- /.modal-dialog -->
-
-    </div>
 
 
 

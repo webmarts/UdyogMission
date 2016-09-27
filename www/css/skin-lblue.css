@@ -17,6 +17,21 @@
 a {
   color: #1faabe;
 }
+#buttons{
+    float:right;
+    position:relative;
+    left:-50%;
+    text-align:left;
+}
+#buttons ul{
+    list-style:none;
+    position:relative;
+    margin-bottom: 20px;
+    left:50%;
+}
+
+#buttons li{float:left;position:relative;}
+
 a:hover {
   color: #32c8de;
 }
@@ -173,22 +188,22 @@ blockquote.blockquote-reverse {
 }
 .nav-tabs > li.active > a:hover {
   background-color: #32c8de;
-  border-color: #32c8de;
+ 
   color: #ffffff;
 }
 .nav-tabs > li.open > a {
   background-color: #32c8de;
-  border-color: #32c8de;
+
   color: #ffffff;
 }
 .nav-tabs > li.open > a:hover {
   background-color: #32c8de;
-  border-color: #32c8de;
+
   color: #ffffff;
 }
 .nav-tabs > li.open > a:focus {
   background-color: #32c8de;
-  border-color: #32c8de;
+
   color: #ffffff;
 }
 /*********************/
@@ -198,34 +213,33 @@ blockquote.blockquote-reverse {
   color: #555555;
 }
 .nav-tabs-one .nav-tabs > li > a:hover {
-  background: #32c8de;
-  color: #ffffff;
-  border-color: #32c8de;
+  background-color: #ffffff;
+  border-bottom: red 5px solid;
+  color: #000000;
 }
 .nav-tabs-one .nav-tabs > li.active > a {
-  background-color: #32c8de;
-  border-color: #32c8de;
-  color: #ffffff;
+  background-color: #ffffff;
+  border-bottom: red 5px solid;
+  color: #000000;
 }
 .nav-tabs-one .nav-tabs > li.active > a:hover {
-  background-color: #32c8de;
-  border-color: #32c8de;
-  color: #ffffff;
+  background-color: #ffffff;
+  border-bottom: red 5px solid;
+  color: #000000;
 }
 .nav-tabs-one .nav-tabs > li.open > a {
-  background-color: #32c8de;
-  border-color: #32c8de;
-  color: #ffffff;
+ background-color: #ffffff;
+  border-bottom: red 5px solid;
+  color: #000000;
 }
 .nav-tabs-one .nav-tabs > li.open > a:hover {
-  background-color: #32c8de;
-  border-color: #32c8de;
-  color: #ffffff;
+background-color: #ffffff;
+  border-bottom: red 5px solid;
+  color: #000000;
 }
 .nav-tabs-one .nav-tabs > li.open > a:focus {
   background-color: #32c8de;
-  border-color: #32c8de;
-  color: #ffffff;
+  color: #000000;
 }
 /*********************/
 /* Nav tabs style #2 */
@@ -384,6 +398,11 @@ blockquote.blockquote-reverse {
 /* Header one            */
 /* Logo & Navigation bar */
 /*************************/
+
+.header{list-style-type: }
+
+
+
 .header-1 .logo h1 a i {
   color: #32c8de;
 }
@@ -426,10 +445,10 @@ blockquote.blockquote-reverse {
   border-top: 2px solid #32c8de;
   border-bottom: 2px solid #32c8de;
 }
-.header-2 .navy #menu-button {
+.header-2 .navy  {
   background: #32c8de;
 }
-.header-2 .navy ul .submenu-button:after {
+.header-2 .navy ul  {
   color: #32c8de;
 }
 /* Block heading */
