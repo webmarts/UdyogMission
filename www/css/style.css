@@ -28,8 +28,8 @@ h1 {
     overflow-x:hidden;
     width: 100%;
     padding-top:60px;position:fixed;top:0;transition:.5s;width:0;z-index:15;}
-.sidenavR{background-color:#111;height:100%;overflow-x:hidden;padding-top:60px;position:fixed;
-    right:0;top:0;transition:.5s;width:0;z-index:1;}
+.sidenavR{background-color:rgba(100,100,100,0.9);height:100%;overflow-x:hidden;padding-top:60px;position:fixed;
+    right:0;top:0;transition:.5s;width:0;z-index:15;}
 .sidenav a,.sidenavR a{color:#ffffff;display:block;font-size:18px;padding:15px;text-decoration:none;transition:.3s;}
 .sidenav a:hover,.offcanvas a:focus,.sidenavR a:hover,.offcanvas a:focus{color:#f1f1f1;}
 .sidenav .closebtn,.sidenavR .closebtn{font-size:36px;margin-left:50px;position:absolute;right:25px;top:0;}

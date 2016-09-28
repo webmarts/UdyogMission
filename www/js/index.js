@@ -37,16 +37,16 @@ var app = {
         app.receivedEvent('deviceready');
         
         function onDeviceReady() {
-            document.addEventListener("backbutton", this.onBackKeyDown, false);
+         //   document.addEventListener("backbutton", this.onBackKeyDown, false);
              
         }
     },
     onBackKeyDown:function(){
-        app.receivedEvent('backbutton');
-        function onBackKeyDown() 
-        {
-         navigator.app.exitApp();
-        }
+        // app.receivedEvent('backbutton');
+        // function onBackKeyDown() 
+        // {
+        //  navigator.app.exitApp();
+        // }
     // Update DOM on a Received Event
     },
   

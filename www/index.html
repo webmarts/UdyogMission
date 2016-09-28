@@ -6,7 +6,7 @@
 
     
     
-    <title>UdyogMission       | List Business</title>
+    <title>Bramhodyog       | List Business</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -212,7 +212,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <!-- Logo section -->
                  
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenavR">
    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
    <ul class="pull-left"  style="list-style-type:none !important"  >
                        
@@ -272,15 +272,17 @@
    <div class="row">
        <div class="col-md-12 text-center">
            <div class="row">
-               <div class="col-xs-1">
-                   <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
-               </div>
+               
                <div class="col-xs-10  col-md-10 ">
                  
                    <h3><a href="index.html"><img src="img/logo-default.png" alt="Logo" style="height:63px"></a> <span style="color:red"  >  
-                     UdyogMission
+                     Bramhodyog
 
                    </span>  </h3>
+               </div>
+               <div class="col-xs-2" style="margin-top:20px">
+                  
+ <button class="btn" style="font-size:20px; background:transparent" onclick="openNav()"><i class="fa fa-bars"></i> </button> 
                </div>
                </div>
               
@@ -302,13 +304,16 @@
 
 <!-- Nav tab style 1 starts -->
 <div class="nav-tabs-one"><!-- Nav tabs -->
-  <div id="buttons">
+  <div id="nav">
     <ul class="nav nav-tabs" >
-    <li class="active"><a href="#p-nav-1" data-toggle="tab">Directory</a></li>
-    <li><a href="#p-nav-2" data-toggle="tab">Requirement</a></li>
-    <li class="review-tab"><a href="#p-nav-3" data-toggle="tab">Shop</a></li>
+    <li class="active" style="width:30%;text-align:center;"><a href="#p-nav-1" data-toggle="tab">Directory</a></li>
+    <li style="width:36%;text-align:center;"><a href="#p-nav-2" data-toggle="tab">Requirement</a></li>
+    <li  style="width:31%;text-align:center;"class="review-tab"><a href="#p-nav-3" data-toggle="tab">Shop</a></li>
   </ul>
   </div><!-- Tab content --><br>
+
+  <button class="btn pull-right" style="background:transparent;border:1px solid #dedede;border-radius:20px" id="backbtn"> <i class="fa fa-chevron-left" style="color:black;font-size:16px" ></i> </button>
+
   <div class="tab-content">
     <div class="tab-pane fade in active" id="p-nav-1">
       <div class="single-property"><!-- Tab content -->
@@ -321,7 +326,7 @@
       </div>
       <div class="clearfix"></div>
     </div>
-  <br><br>
+  <br>
 
 <div class="tab-pane fade" id="p-nav-2">
   <div class="single-property sp-agent">
@@ -391,7 +396,7 @@
         <!-- Footer Content -->
             <!-- Paragraph -->
             <center>
-            <p>UdyogMission 2016, all rights reserved <br> Developed by <a href="http://www.webmarts.in">Webmart </a> support@bramhodyogexpo.in </p>
+            <p>Bramhodyog 2016, all rights reserved <br> Developed by <a href="http://www.webmarts.in">Webmart </a> support@bramhodyogexpo.in </p>
             </center>
             
             <div class="clearfix"></div>
@@ -425,7 +430,7 @@
     
     <!-- Magnific Popup -->
     <script src="js/jquery.magnific-popup.min.js"></script>
-      <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="push.js"></script>
     <script type="text/javascript" src="js/my.js"></script>
@@ -465,6 +470,7 @@ $(function(){
 
 $(document).ready(function(){
 
+$('#backbtn').hide();
 var user = window.localStorage["username"];
 
     
@@ -499,11 +505,11 @@ var user = window.localStorage["username"];
      var urldata=url.split('/')
      else
      {
- fetch_category();       
-fetch_all_category();
-fetch_city()
-fetch_result();
-fetch_shop_category();
+    fetch_category();       
+    fetch_all_category();
+    fetch_city()
+    fetch_result();
+    fetch_shop_category();
      }
     
      
@@ -511,11 +517,11 @@ fetch_shop_category();
      var dataxx = url.split("?");
      else
      {
- fetch_category();       
- fetch_shop_category()
-fetch_all_category();
-fetch_city()
-fetch_result();
+    fetch_category();       
+    fetch_shop_category()
+    fetch_all_category();
+    fetch_city()
+    fetch_result();
      }
     
      if(dataxx!=undefined)   
@@ -734,7 +740,7 @@ $("#frmlogin").submit(function(e){
 
         $('.parent_cat').html('');
          $('.parent_cat1').html('');
-
+         $('#backbtn').hide();
         $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_all_parent_categories",
            
             function(data, status){
@@ -757,6 +763,9 @@ var html='<div class="col-md-4 col-sm-4 col-xs-4" ><div class="counter-item '+va
         function fetch_post_by_category(category)
         {
             $('#cattop').css('display','block');
+
+            $('#backbtn').show();
+            $('#backbtn').attr('onclick','fetch_category()');
 
             $('#cattop a').attr('href','post_requirement.html?category='+category);
          $('.parent_cat').html('');
@@ -828,6 +837,10 @@ var html='<div class="col-md-4 col-sm-4 col-xs-4" ><div class="counter-item '+va
 
         function fetch_post_by_city(city)
         {
+
+            $('#backbtn').show();
+            $('#backbtn').attr('onclick','fetch_category()');
+
          $('.parent_cat').html('');
          $('.parent_cat1').html('');
         var htmldata='<span class="recent-post"><div class="blog-one" id="griddiv"></div></span><div class="ajax-loading recent-loading"><img src="img/loading.gif" alt="loading..."><a href="" class="load-more-recent btn btn-blue" style="width:100%">Load More</a><br></div>';
@@ -1085,6 +1098,8 @@ var per_page2 = '6';
 
 function fetch_shop_category()
 {
+
+  $('#backbtn').hide();
    $('.parent_cat3').html('');
          
    $('.parent_cat4').html('');
@@ -1111,6 +1126,9 @@ var html='<div class="col-md-4 col-sm-4 col-xs-4" ><div class="counter-item '+va
 function fetch_product_by_category(category)
         {
             $('#cattop').css('display','block');
+
+            $('#backbtn').show();
+            $('#backbtn').attr('onclick','fetch_shop_category()');
 
             $('#cattop a').attr('href','post_requirement.html?category='+category);
          $('.parent_cat3').html('');
