@@ -37,8 +37,9 @@ function onDeviceReady(){
                else if(jsondata.length==1 || user_id!='' || user_id!='undefined')
                {
                 
-                $.post('http://www.bramhodyogexpo.in/UdyogMission/index.php/home/post_app_regid',{reg_id:data.registrationId,user_id:user_id},
+                $.post('http://www.bramhodyogexpo.in/UdyogMission/index.php/home/update_app_regid',{reg_id:data.registrationId,user_id:user_id},
                   function(postreg, status){ 
+                    //alert(postreg)
                   })
                }
 
