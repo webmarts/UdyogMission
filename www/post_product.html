@@ -171,6 +171,10 @@
   </ul>
 </div>
 </li>
+<li class="myaccount">
+                         <a class="" id='' href='myorders.html'>
+                          <i class="fa fa-shopping-cart" style="color:#ffd700;font-size:25px;margin-right:10px"> </i> My Orders</a>
+                       </li>
 <li class="">
                          <a class="signup" id='signup'>
                           <i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"> </i> Signup</a>
@@ -235,14 +239,14 @@
                                 <label class="col-md-3 control-label">Category</label>
                                 <div class="col-md-8">
                                     <select name="category" id="category" class="form-control">
-                                        <option value="1">Select Category</option>
-                                             <option value="2">Clothing</option>
-                                        <option value="3"> Home & Living</option>
-                                         <option value="4">Kitchen & Diving</option>
-                                        <option value="5">Electronics</option>  
-                                        <option value="6">Stationery & Craft</option>  
-                                              <option value="7">Book Music & Entertainment</option>
-                                                <option value="8">Sports & Fitness</option>
+                                        <option value="">Select Category</option>
+                                             <option value="1">Clothing</option>
+                                        <option value="2"> Home & Living</option>
+                                         <option value="3">Kitchen & Diving</option>
+                                        <option value="4">Electronics</option>  
+                                        <option value="5">Stationery & Craft</option>  
+                                              <option value="6">Book Music & Entertainment</option>
+                                                <option value="1">Sports & Fitness</option>
                                                                                           
                                                                             </select>
                                                                     </div>
@@ -267,18 +271,13 @@
                    
 
                         <div class="form-group">
-                            <label class="col-md-3 control-label">Cost</label>
+                            <label class="col-md-3 control-label">Price</label>
                             <div class="col-md-8">
                                                                 <input id="cost" type="text" name="cost" placeholder="Price" value="" class="form-control">
                                                             </div>
                         </div>                           
 
-                         <div class="form-group">
-                            <label class="col-md-3 control-label">Price</label>
-                            <div class="col-md-8">
-                                                                <input id="phone_no" type="text" name="phone_no" placeholder="Phone No" value="" class="form-control">
-                                                            </div>
-                        </div>
+                         
 
                      
                        <div class="form-group">
@@ -342,7 +341,8 @@
         <!-- Footer Content -->
             <!-- Paragraph -->
      <center>
-           <p>Bramhodyog 2016, all rights reserved <br> <a href="mailto:support@bramhodyogexpo.in">Contact Us </a> For Web Design
+           <p>Bramhodyog 2016, all rights reserved <br> <a href="tel:9822298988">Call Us </a>
+ For Web Design
            , Mobile App & Online Marketing </p>
            </center>
             
@@ -517,7 +517,7 @@ var user = window.localStorage["username"];
           $('#post_requirement').show();
          $('#signup').hide();
     $('.myaccount').show();
-
+      $('#email').val(user)
         $('#list_business').attr('href','subscribe.html');
         $('#login').removeClass('signin');
         $('#login').attr('href','logout.html');

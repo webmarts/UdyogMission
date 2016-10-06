@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="in.bramhodyogexpo.udyogmission" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Bramhodyog</name>
+    <description>
+        Shripad Deshmukh (deshmukhsc@gmail.com)
+   Bramhodyog app is specially developed for Brahman business entrepreneurs to promote their business and to increase inter-community business.Using "Leads" facility you can post your requirements and a notification will be sent to business owners with respect to their category.You use "Leads" facility can be used to get business as well as to give business to other memebrs.
+ 
+    </description>
+    <author email="support@bramhodyogexpo.com" href="http://www.bramhodyogexpo.in/">
+        Webmart Team
+    </author>
+    <content src="index.html" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="prerendered-icon" value="false" />
+    <splash src="splash.png" />
+    <icon src="icon.png" />
+    <access browserOnly="true" origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>

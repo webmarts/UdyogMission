@@ -21,7 +21,8 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/main.js"></script>
 
-
+<script src="dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
     <!-- Styles -->
     <!-- Bootstrap CSS -->
     <style type="text/css">
@@ -279,6 +280,12 @@
   </ul>
 </div>
 </li>
+
+<li class="myaccount">
+                         <a class="" id='' href='myorders.html'>
+                          <i class="fa fa-shopping-cart" style="color:#ffd700;font-size:25px;margin-right:10px"> </i> My Orders</a>
+                       </li>
+
 <li class="">
                          <a class="signup" id='signup'>
                           <i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"> </i> Signup</a>
@@ -389,6 +396,10 @@
    
                                                         
   <div class="tab-pane fade" id="p-nav-3">
+    <div class="clearfix"></div>
+    <div>
+ <center><a href='post_product.html'  class='btn' id='post_pro' style="background-color:#ed5441;color:#ffffff">Post Product</a></center>
+ </div>
       <div class="counter-four">
     <div class="counter-content parent_cat3">
    
@@ -425,7 +436,8 @@
         <!-- Footer Content -->
             <!-- Paragraph -->
      <center>
-           <p>Bramhodyog 2016, all rights reserved <br> <a href="mailto:support@bramhodyogexpo.in">Contact Us </a> For Web Design
+           <p>Bramhodyog 2016, all rights reserved <br> <a href="tel:9822298988">Call Us </a>
+ For Web Design
            , Mobile App & Online Marketing </p>
            </center>
             
@@ -515,6 +527,7 @@ var user = window.localStorage["username"];
          $('#signup').show();
      $('.myaccount').hide();
      $('#post_req').hide();
+     $('#post_pro').hide();
 
     }
     else
@@ -523,6 +536,7 @@ var user = window.localStorage["username"];
          $('#signup').hide();
     $('.myaccount').show();
     $('#post_req').show();
+     $('#post_pro').show();
         $('#list_business').attr('href','subscribe.html');
         $('#login').removeClass('signin');
         $('#login').attr('href','logout.html');
@@ -1131,6 +1145,7 @@ function fetch_shop_category()
 {
 
   $('#backbtn').hide();
+   $('#post_pro').hide();
    $('.parent_cat3').html('');
          
    $('.parent_cat4').html('');
@@ -1156,7 +1171,27 @@ var html='<div class="col-md-4 col-sm-4 col-xs-4" ><div class="counter-item '+va
 
 function fetch_product_by_category(category)
         {
+
+
+          var user = window.localStorage["username"];
+
+    
+    
+         if(user=="" || !user)
+    {
+      
+     $('#post_pro').hide();
+
+    }
+    else
+    {
+     $('#post_pro').show();
+    }
+
+
             $('#cattop').css('display','block');
+            
+             
 
             $('#backbtn').show();
             $('#backbtn').attr('onclick','fetch_shop_category()');
@@ -1199,8 +1234,12 @@ function fetch_product_by_category(category)
                 var city=val.city[0];
                
 
-                  var html='<div class="blog-one-item row"><h5 align="left" style="word-wrap:break-word;margin-left:15px"> <a onclick="viewshop('+val.id+')">'+val.title+'</a></h5>  <div class="blog-one-img col-md-3 col-sm-3 col-xs-4"><a onclick="viewshop('+val.id+')"><div class="image-style-one"><img style="height:120px;width:130px;border:1px solid #000000;padding:5px" class="img-responsive" alt="'+val.title+'"  src="img/logo.png"></div></a></div><div align="left" class="blog-one-content col-md-9 col-sm-9 col-xs-8"> <a style="color:black"  onclick="fetch_post_by_category('+category.id+')"><i style="color:black" class="fa fa-tag"></i>&nbsp;<b>'+category.name+'</b></a> &nbsp; <br> <a style="color:black" onclick="fetch_post_by_city('+city.id+')"><i  class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+'</a><br><a href="mailto:'+val.email+'"   target="_top"><i style="color:green" class="fa fa-envelope"></i>&nbsp;'+val.email+'</a> &nbsp;<br><a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
-               $('#griddiv3').append(html);
+               //    var html='<div class="blog-one-item row"><h5 align="left" style="word-wrap:break-word;margin-left:15px"> <a onclick="viewshop('+val.id+')">'+val.title+'</a></h5>  <div class="blog-one-img col-md-3 col-sm-3 col-xs-4"><a onclick="viewshop('+val.id+')"><div class="image-style-one"><img style="height:120px;width:130px;border:1px solid #000000;padding:5px" class="img-responsive" alt="'+val.title+'"  src="img/logo.png"></div></a></div><div align="left" class="blog-one-content col-md-9 col-sm-9 col-xs-8"> <a style="color:black"  onclick="fetch_post_by_category('+category.id+')"><i style="color:black" class="fa fa-tag"></i>&nbsp;<b>'+category.name+'</b></a> &nbsp; <br> <a style="color:black" onclick="fetch_post_by_city('+city.id+')"><i  class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+'</a><br><a href="mailto:'+val.email+'"   target="_top"><i style="color:green" class="fa fa-envelope"></i>&nbsp;'+val.email+'</a> &nbsp;<br><a href="tel:'+val.phone_no+'"><button style="border:1px solid red;color:red;background-color:#ffffff;margin-top:5px" class="btn" type="submit">CALL NOW</button> </a></div></div></div></div>';
+
+             var html='<div class="blog-one-item row"><h5 align="left" style="word-wrap:break-word;"><a  onclick="viewshop('+val.id+')">'+val.title+'</a></h5><div class="blog-one-img col-md-3 col-sm-3 col-xs-5"><a  onclick="viewshop('+val.id+')"><div class="image-style-one"><img style="height:120px;width:130px;border:1px solid #000000;padding:5px" src="img/logo.png" class="img-responsive"></div></a><h6 style="margin-top:10px"> <a href="tel:'+val.phone_no+'"><i class="fa fa-phone red"></i>'+val.phone_no+'</a></h6></div><div class="blog-one-content col-md-9 col-sm-9 col-xs-7"><p>'+val.description+'</p><div class="blog-meta">'+category.name+'<br><a href="mailto:'+val.email+'"  target="_top"><i style="color:green" class="fa fa-envelope"></i>&nbsp '+val.email+'</a><br><i class="fa fa-map-marker" style="color:orange"></i> &nbsp;'+city.name+'  &nbsp;<button class="btn btn-red" type="submit" style="margin-top:8px" onclick="place_order('+val.id+')">Order</button></div></div></div></div>';
+                  
+
+                $('#griddiv3').append(html);
        
            
             
@@ -1216,7 +1255,40 @@ function fetch_product_by_category(category)
         {
           document.location.href='single_product.html?id='+val
         }
- 
+      
+      function place_order(val)
+        {
+          var user = window.localStorage["username"];
+
+    
+    
+         if(user=="" || !user)
+         {
+          $('#signin-modal').modal('show');
+         }
+         else
+         {
+            var user_id=window.localStorage['id'];
+            var order_id=window.localStorage['order_id']
+           $.post('http://www.bramhodyogexpo.in/UdyogMission/index.php/home/order',{user_id:user_id,order_id:order_id,product_id:val},
+            function(data, status){
+                  var obj = JSON.parse(data);
+                  
+                  if(obj.status=='true')
+                  {
+                    if(obj.order_id!='' || obj.order_id!='undefined')
+                    {
+                    window.localStorage['order_id']=obj.order_id;  
+                    }
+                    
+                     swal("You order is placed");
+                     window.location.href='place_order.html' ;
+                  }
+                });
+
+         }
+          
+        }
 </script>
 
 
@@ -1272,10 +1344,7 @@ function fetch_product_by_category(category)
                                     <button type="reset" class="btn btn-white">Reset</button>
                                 </div>
                             </div>
-                            <div class="col-sm-offset-3 col-sm-9">
-                                <a href="" class="black">Forgot Password ?</a> 
-                                                                | <a href="signup.html" class="black">Sign Up</a>
-                                                            </div>
+                            
                         </form>
                         <br>
                                             </div>
