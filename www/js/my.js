@@ -5,7 +5,10 @@ function onDeviceReady(){
     android: {
       senderID: "488007969052",
         "icon": "icon",
-            "iconColor": "#FFFFFF"
+            "iconColor": "#FFFFFF",
+            alert: "true",
+      badge: "true",
+      sound: "true"
     },
     ios: {
       alert: "true",
@@ -17,17 +20,26 @@ function onDeviceReady(){
   push.on('registration', function(data) {
     // alert(data.registrationId);
    // $("#regid").val(data.registrationId);
+
     $.post('http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_app_regid',{reg_id:data.registrationId},
             function(datareg, status){ 
 
                var jsondata = $.parseJSON(datareg)
-               // alert(jsondata)
+               // alert(jsondata)  
+               var user_id = window.localStorage["id"];
                if(jsondata.length==0)
                {
                 $.post('http://www.bramhodyogexpo.in/UdyogMission/index.php/home/post_app_regid',{reg_id:data.registrationId},
                   function(postreg, status){ 
                   })
 
+               }
+               else if(jsondata.length==1 || user_id!='' || user_id!='undefined')
+               {
+                
+                $.post('http://www.bramhodyogexpo.in/UdyogMission/index.php/home/post_app_regid',{reg_id:data.registrationId,user_id:user_id},
+                  function(postreg, status){ 
+                  })
                }
 
             });
