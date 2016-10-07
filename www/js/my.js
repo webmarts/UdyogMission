@@ -39,7 +39,7 @@ function onDeviceReady(){
                 
                 $.post('http://www.bramhodyogexpo.in/UdyogMission/index.php/home/update_app_regid',{reg_id:data.registrationId,user_id:user_id},
                   function(postreg, status){ 
-                    //alert(postreg)
+                   // alert(data.registrationId)
                   })
                }
 
@@ -56,7 +56,15 @@ function onDeviceReady(){
                     data.city,           // title
                     'Ok'                  // buttonName
             );
-     document.location.href='requirement.html'
+     if(data.flag==1)
+     {
+     document.location.href='requirement.html' 
+     }
+     else
+     {
+      document.location.href='myorders.html'
+     }
+     
   });
   push.on('error', function(e) {
   });

@@ -20,14 +20,16 @@
       
     <script src="js/jquery-2.1.1.min.js"></script>
  <script src="js/main.js"></script>
-
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.1.2/css/rowReorder.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.0/css/responsive.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.0/css/responsive.bootstrap.min.css">
 
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.1.2/js/dataTables.rowReorder.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.0/js/responsive.bootstrap.min.js"></script>
     <!-- Bootstrap CSS -->
     <style type="text/css">
 @import url("main.css");
@@ -297,6 +299,7 @@
                                 <tr>
                                   <th>Sr No.</th>
                                   <th>Product</th>
+                                  <th>Contact</th>
                                   <th>Price</th>
                                   <th>Total Amount</th>
                                 </tr>
@@ -634,7 +637,7 @@ $(document).ready(function(){
             } );
 
    var table = $('#example1').DataTable( {
-              
+               scrollX:300,
                 responsive: true
             } );
 
@@ -667,7 +670,7 @@ $(document).ready(function(){
               var i=0;
               $.each(obj, function(key,val) {
                 i+=1;
-                 html+='<tr><td>'+i+'</td><td>'+val.title+'</td><td>'+val.price+'</td><td>'+val.amount+'</td>';
+                 html+='<tr><td>'+i+'</td><td>'+val.title+'</td><td>'+val.phone_no+'</td><td>'+val.price+'</td><td>'+val.amount+'</td>';
               })
               
               $('#getsold').html(html);
