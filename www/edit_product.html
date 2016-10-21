@@ -309,7 +309,20 @@
                         </div>
                             
                            
+                        <div class="form-group">
+                        <label class="col-md-3 control-label">Product Image</label>
+                        <div class="col-md-8">
+                            <div class="featured-img">
+                                                            <input type="hidden" name="featured_img" id="featured-img-input" value="">
+                               
+                               <input type='file' name='userfile' id='fileupload'>
+                                                        </div><br>
 
+                                                         <div id="progress" class="progress">
+                              <div class="progress-bar progress-bar-success"></div>
+                          </div>
+                        </div>
+                    </div>
            
 
                             
@@ -491,6 +504,47 @@ $(function(){
 
  $(".dropdown-toggle").dropdown();
 
+
+$(function () {
+
+ 
+ 'use strict';
+        // Change this to the location of your server-side upload handler:
+        var url = window.location.hostname === 'blueimp.github.io' ?
+                                    '//jquery-file-upload.appspot.com/' : 'http://www.bramhodyogexpo.in/UdyogMission/index.php/home/do_upload';
+               
+        $('#fileupload').fileupload({
+            url: url,
+            dataType: 'json',
+           
+            
+            fail: function(e,data){
+            
+            },
+            done: function (e, data) {
+                console.log(data)
+                $.each(data.result.files, function (index, file) {
+
+                 $('#featured-img-input').val(file.name)
+                 alert("Image uploaded")
+                 
+                });
+            },
+            progressall: function (e, data) {
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+                $('#progress .progress-bar').css(
+                    'width',
+                    progress + '%'
+                );
+            }
+        }).prop('disabled', !$.support.fileInput)
+            .parent().addClass($.support.fileInput ? undefined : 'disabled');
+    });   
+  
+
+
+
+
 $(document).ready(function(){
 
 var user = window.localStorage["username"];
@@ -520,6 +574,28 @@ var user = window.localStorage["username"];
          $('#login').html('<i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"></i>Logout')
     }
 
+$('[type="file"]').ezdz({
+            text: 'select a picture',
+            // validators: {
+            //     maxWidth:  600,
+            //     maxHeight: 400
+            // },
+
+        
+            reject: function(file, errors) {
+               
+            }
+        });
+ 
+
+$('[type="file"]').ezdz('preview', 'http://www.bramhodyogexpo.in/UdyogMission/uploads/thumbs/no-image.png');
+
+
+
+     window.localStorage['plainkey']='';
+      window.localStorage['city']='';
+       window.localStorage['category']='';
+        window.localStorage['sort_by']='';
 
     fetch_state()
 
@@ -550,7 +626,8 @@ var user = window.localStorage["username"];
         $('#cost').val(obj.cost)
         $('#state').val(obj.state)
         $('#category').val(obj.category)
-           
+           $('[type="file"]').ezdz('preview', 'http://www.bramhodyogexpo.in/UdyogMission/uploads/images/'+obj.img);
+        $('#featured-img-input').val(obj.img)
         fetch_city(obj.city);
  })
 
@@ -745,7 +822,7 @@ $("#frmpost").submit(function(e){
             var description=$('#description').val();
             var cost=$('#cost').val();
             var user_id=window.localStorage['id'];
-
+            var featured_img=$('#featured-img-input').val();
             if(flag==true && $("#category").val()=="")
           {
               $("#category").addClass('text-danger')
@@ -825,7 +902,8 @@ $("#frmpost").submit(function(e){
                 title:title,
                 description:description,
                 cost:cost,
-                id:post_id
+                id:post_id,
+                featured_img:featured_img
             },
             function(data, status){
                     var jsondata = $.parseJSON(data)
