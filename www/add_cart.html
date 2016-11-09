@@ -6,7 +6,7 @@
 
     
     
-    <title>Bramhodyog       | List Business</title>
+    <title>UdyogMission       | List Business</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,13 +17,15 @@
     <meta name="revisit-after" content="3 days">
 
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <link rel="stylesheet" href="css/jquery.ezdz.min.css">
       
     <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/main.js"></script>
-
-<script src="dist/sweetalert.min.js"></script>
+ <script src="js/main.js"></script>
+   <script src="dist/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 
+    <script src="js/jquery.ezdz.min.js"></script>
     <!-- Styles -->
     <!-- Bootstrap CSS -->
     <style type="text/css">
@@ -32,8 +34,6 @@
     
 
 <style>
-
-
     .top-bar{
         background: #fdfdfd; 
     }
@@ -47,27 +47,26 @@
     }
     .header-2 .navy > ul > li > a{
         color: #666    }
-         
+    .header-2 .navy ul ul li a{
+        color: #666        
     }
    .header-2 .navy > ul > li > a:hover{
         color: #32c8de    }
-       
+    .header-2 .navy ul ul li a:hover{
+        color: #32c8de        
     }
     .header-2 .navy > ul > .active > a{
         color: #32c8de    }
-        
+    .header-2 .navy ul ul .active a{
+        color: #32c8de        
     }
 
     .real-estate .re-big-form{
         padding: 15px 0 0 0;
                 background: #9fee9b;        
             }
-    
-
-
-
-        
 </style>
+
 
 
 <body class="home" dir="ltr" id="dummybodyid">
@@ -106,6 +105,8 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <!-- Logo section -->
+                <!-- Logo section -->
+                 
  <div id="mySidenav" class="sidenavR">
    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
    <ul class="pull-left"  style="list-style-type:none !important"  >
@@ -208,7 +209,7 @@
                
 
            <ul style="">
-             <li class="account_cart" ><a  id="account_cart"><img style="margin-top: 10px;background-color: #ffffff;width:20px;height:20px;margin-left:-20px"    src="img/cart-top.png"   style="cursor:pointer;position: relative;"> </a>  </li>
+             <li class="account_cart" ><a  id="account_cart" ><img style="margin-top: 10px;background-color: #ffffff;width:20px;height:20px;margin-left:-20px"    src="img/cart-top.png"   style="cursor:pointer;position: relative;"> </a>  </li>
              <!-- 
              -->
 
@@ -233,124 +234,43 @@
 
 
 
+
+
+
+
+
+<!-- Main content starts -->
+<div class="main-block">
+    
+<!-- Container -->
 <div class="container">
 
 
 
-<form class="form-horizontal" name='frmorder' id='frmorder'>
-    
-                <!-- Shopping items content -->
-                <div class="shopping-content">
-                    <div class="shopping-checkout">
-                        <!-- Heading -->
-                            <h4>Order Info</h4>
-                            <hr>
-                          
 
-                       
-                       <div class="form-group">
-                                <label class="col-md-3 control-label">State</label>
-                                <div class="col-md-8">
-                                    <select name="state" id="state" class="form-control" onchange="fetch_city()"><option value="">Select One</option></select>
-                                                                    </div>
-                            </div>
-                                                    <div class="form-group">
-                                <label class="col-md-3 control-label">City</label>
-                                <div class="col-md-8">
-                                                                        <input type="hidden" name="selected_city" id="selected_city" value="">
-                                                                        <select name="city" id="city" class="form-control"><option value="">Select One</option></select>
-                                                                                                        </div>
-                            </div>
-                      <div class="form-group">
-                            <label class="col-md-3 control-label">Address</label>
-                              <div class="col-md-8">
-                                <textarea name='address' id='address' class='form-control'></textarea>
-                              </div>
-                            </div>      
-                      <div class="form-group">
-                            <label class="col-md-3 control-label">Phone</label>
-                            <div class="col-md-8">
-                                                                <input id="phone_no" type="text" name="phone_no" placeholder="Phone" value="" class="form-control">
-                                                            </div>
-                        </div>
+<center><h3 style="color:red">  Shopping Cart</h3></center><hr>
 
-                        
-
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">Email</label>
-                            <div class="col-md-8">
-                                                                <input id="email" type="text" name="email" placeholder="Email" value="" class="form-control">
-                                                            </div>
-                        </div>
-                            
-                           
-<div class="accorodinbox" id="accordinbox">    
-          
-
-                            
-            </div>
-                    
-                       
-<input type="hidden" name="amount" id="amount">
-
-        <div class="row">
-            <div class="col-md-12">
-                <hr>
-                <div class="form-group" style="text-align:center">
-                    <button class="btn btn-color" id="btn_alert"  type="submit">Submit Order</button>
-                    <button class="btn btn-default" type="reset">Cancel</button>
-                </div>
-            </div>
-        </div>
-    </form>
-		
-	</div>
+<div id="ajax_div">
 </div>
-</div>
-<hr>
-
-
+<a href="place_order.html" id="checkout" class="btn btn-success">Checkout</a>
 <br>
-<br>
-<br>
-<div class="footer navbar-fixed-bottom" style="background-color:black;color:white;" >
-    <!-- Container -->
-    <div class="container">
-        <!-- Footer Content -->
-            <!-- Paragraph -->
-     <center>
-           <p>Bramhodyog 2016, all rights reserved <br> <a href="tel:9822298988">Call Us </a>
- For Web Design
-           , Mobile App & Online Marketing </p>
-           </center>
-            
-            <div class="clearfix"></div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
-   
 </div>
 
-<div id="modal">
-    <!-- Container -->
-   
-</div>
-</div>
-
-<span class="totop" style="display: none;"><a href="#"><i class="fa fa-angle-up bg-color"></i></a></span>
-
-<!-- <span class="cattop" style="display: none;" id="cattop"><a href="#" ><i class="fa fa-edit" ></i></a></span> -->
-
-    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-
-<!--    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
-
-
-   
-
-    <!-- Javascript files -->
-
-    <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
     
     <!-- Magnific Popup -->
@@ -358,13 +278,79 @@
    
 <script type="text/javascript">
 
- function openNav() {
+function ajaxindicatorstart(text)
+{
+  if(jQuery('body').find('#resultLoading').attr('id') != 'resultLoading'){
+  jQuery('body').append('<div id="resultLoading" style="display:none"><div><img src="img/ajax-loader.gif"><div>'+text+'</div></div><div class="bg"></div></div>');
+  }
+
+  jQuery('#resultLoading').css({
+    'width':'100%',
+    'height':'100%',
+    'position':'fixed',
+    'z-index':'10000000',
+    'top':'0',
+    'left':'0',
+    'right':'0',
+    'bottom':'0',
+    'margin':'auto'
+  });
+
+  jQuery('#resultLoading .bg').css({
+    'background':'#000000',
+    'opacity':'0.7',
+    'width':'100%',
+    'height':'100%',
+    'position':'absolute',
+    'top':'0'
+  });
+
+  jQuery('#resultLoading>div:first').css({
+    'width': '250px',
+    'height':'75px',
+    'text-align': 'center',
+    'position': 'fixed',
+    'top':'0',
+    'left':'0',
+    'right':'0',
+    'bottom':'0',
+    'margin':'auto',
+    'font-size':'16px',
+    'z-index':'10',
+    'color':'#ffffff'
+
+  });
+
+    jQuery('#resultLoading .bg').height('100%');
+       jQuery('#resultLoading').fadeIn(300);
+    jQuery('body').css('cursor', 'wait');
+}
+function ajaxindicatorstop()
+{
+    jQuery('#resultLoading .bg').height('100%');
+       jQuery('#resultLoading').fadeOut(300);
+    jQuery('body').css('cursor', 'default');
+}
+jQuery(document).ajaxStart(function () {
+    //show ajax indicator
+ajaxindicatorstart('loading data.. please wait..');
+}).ajaxStop(function () {
+//hide ajax indicator
+ajaxindicatorstop();
+});
+jQuery.ajax({
+   global: false,
+   // ajax stuff
+});
+
+    function openNav() {
        document.getElementById("mySidenav").style.width = "100%";
    }
 
    function closeNav() {
        document.getElementById("mySidenav").style.width = "0";
    }
+
 
 $(function(){
 
@@ -383,9 +369,301 @@ $(function(){
     // jQuery(window).resize(function(){
     //    console.log(jQuery(window).width()); 
     // });
+
+    
 });
+
  $(".dropdown-toggle").dropdown();
+ 
+ $(document).ready(function(){
+
+var user = window.localStorage["username"];
+
+    
+    
+         if(user=="" || !user)
+    {
+       $('#list_business').attr('href','login.html');
+        $('#login').addClass('signin');
+         $('#login').removeAttr('href');
+         $('#login').html('<i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"></i>Signin')
+           $('#post_requirement').hide();
+         $('#signup').show();
+     $('.myaccount').hide();
+     $('#post_pro').hide();
+     $('#account_cart').attr('href','login.html');
+    }
+    else
+    {
+      $('#cart_count').html(window.localStorage["cart_count"]);
+      $('#account_cart').attr('href','add_cart.html');
+          $('#post_requirement').show();
+         $('#signup').hide();
+    $('.myaccount').show();
+    $('#post_pro').show();
+        $('#list_business').attr('href','subscribe.html');
+        $('#login').removeClass('signin');
+        $('#login').attr('href','logout.html');
+         $('#login').html('<i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"></i>Logout')
+         get_order();
+    }
+
+
+$("#frmsingup").submit(function(e){
+      e.preventDefault()
+    flag=true;
+    $("#frmsingup input").removeClass("text-danger")
+            if(flag==true && $("#fname").val()=="")
+           {
+               $("#fname").addClass('text-danger')
+               alert('Please Enter First Name')
+               
+               $("#fname").focus()
+               flag=false;
+           }
+           
+           if(flag==true && $("#lname").val()=="")
+           {
+               $("#lname").addClass('text-danger')
+               alert('Please Enter Last Name')
+               $("#lname").focus()
+               flag=false;
+           }
+
+               if(flag==true && $("#email").val()=="")
+           {
+               $("#email").addClass('text-danger')
+               alert('Please Enter Email')
+               $("#email").focus()
+               flag=false;
+           }
+
+           if(flag==true && $("#uname").val()=="")
+           {
+               $("#uname").addClass('text-danger')
+               alert('Please Enter Username')
+               $("#uname").focus()
+               flag=false;
+           }
+
+           if(flag==true && $("#password").val()=="")
+           {
+               $("#password").addClass('text-danger')
+               alert('Please Enter Password')
+               $("#password").focus()
+               flag=false;
+           }
+
+           if(flag==true && $("#repassword").val()=="")
+           {
+               $("#repassword").addClass('text-danger')
+               alert('Please Enter Confirm Password')
+               $("#repassword").focus()
+               flag=false;
+           }
+
+           
+            
+
+            if (flag==true && ($("#password").val() != $("#repassword").val()))
+
+               { 
+                   alert("Passwords do not match."); 
+                   flag=false;
+               }
+
+/*
+            if(flag==true && (!$("#terms_conditon_field").prop('checked')))
+           {
+            alert("Please Check Terms and Condition");
+            flag=false;
+            }*/
+            
+
+            if (flag==true)
+            {
+                console.log("start")
+                var senddata = $("#frmsingup").serialize()
+                console.log(senddata)
+                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/register",senddata)
+                .done(function(data){
+                     try{
+                        var jsondata = $.parseJSON(data)
+                        console.log(jsondata)
+                        if(jsondata.status=='true')
+                        {
+                          $("#fname").val('')
+                          $("#lname").val('')
+                          $("#email").val('')
+                          $("#password").val('')
+                          $("#repassword").val('')
+                        //  alert('Thank you for registration')
+                          $('#review-msg').html('<div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Thank you for registration. </div>') 
+                            window.localStorage["username"] = jsondata.email;
+                            window.localStorage["id"] = jsondata.userid;  
+                            document.location.href="subscribe.html"; 
+                        }
+                        else
+                        {
+                            
+                           alert(jsondata.reason);
+                        }
+                     }
+                     catch(e){}
+
+                })
+                .fail(function(){
+                    console.log("fail");
+                })
+
+            }
+            else
+            {
+                $("#regmsg").html("  Please Fill The all form ")
+            }
+
+    
+    })
+$("#frmlogin").submit(function(e){
+      e.preventDefault()
+    flag=true;
+    $("#frmlogin input").removeClass("text-danger")
+            if(flag==true && $("#email1").val()=="")
+           {
+               $("#email1").addClass('text-danger')
+               alert('Please Enter Email')
+               
+               $("#email1").focus()
+               flag=false;
+           }
+           
+           if(flag==true && $("#pwd1").val()=="")
+           {
+               $("#pwd1").addClass('text-danger')
+               alert('Please Enter Password')
+               $("#pwd1").focus()
+               flag=false;
+           }
+            if (flag==true)
+            {
+                console.log("start")
+                var senddata = $("#frmlogin").serialize()
+                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/login",senddata)
+                .done(function(data){
+                     try{
+                        var jsondata = $.parseJSON(data)
+                        console.log(jsondata)
+                        if(jsondata.status=='true')
+                        {
+                                
+                         
+                            window.localStorage["username"] = jsondata.email;
+                            window.localStorage["id"] = jsondata.userid;  
+                            document.location.href="subscribe.html";   
+                            /*location.reload();*/
+                        }
+                        else
+                        {
+                            
+                           alert(jsondata.reason);
+                        }
+                     }
+                     catch(e){}
+
+                })
+                .fail(function(){
+                    console.log("fail");
+                })
+
+            }
+            else
+            {
+                $("#regmsg").html("  Please Fill The all form ")
+            }
+
+    
+    })
+}); 
+
+     
+
+  function get_order()
+  {
+
+    $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_cart/"+window.localStorage['order_id'],
+           
+            function(data, status){
+              var obj = JSON.parse(data);
+              if(obj.length==0)
+              {
+                $('#checkout').hide();
+                $('#ajax_div').html('<strong>Your Cart is empty</strong>');
+              }
+              $.each(obj, function(key,val) {
+                if(val.img1=='')
+              {
+                var img="img/logo.png";
+              }
+              else
+              {
+                var img="http://www.bramhodyogexpo.in/UdyogMission/uploads/images/"+val.img1;
+              }
+
+                var html='<div class="row"><div class="col-md-4 col-xs-4 col-sm-4" ><img src="'+img+'" height="100px" width="100px"  style="border:1px solid black; padding:5px" ></div><div class="col-md-8 col-xs-8 col-sm-8" style="margin-top:-10px"><h5>'+val.title+'</h5><h4 style="color:black;font-size:14px"> price: <span style="color:red">'+val.price+'</span>  </h4><div class="row" ><div class="col-md-8 col-xs-8 col-sm-8" ><h4  style="color:black;font-size:14px"> Qty: <input type="number" style="width:60px!important ;height:20px !important" name="qty_'+val.id+'" id="qty_'+val.id+'" value="'+val.quantity+'" ></h4></div><div class="col-md-4 col-xs-4 col-sm-4" style="margin-top:5px"><a href="#" onclick="update_item('+val.id+')"><i class="fa fa-undo" style="font-size:20px;color:red"></i></a><a href="#" onclick="remove_item('+val.id+')"<i class="fa fa-trash" style="font-size:20px;color:red;margin-left:10px"> </i></a></div></div></div></div><br><br>';
+               $('#ajax_div').append(html);
+           });
+
+                });
+
+    
+  }
+
+
+
+function remove_item(val)
+{
+
+
+ $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/remove_from_cart",
+    {
+     id:val,
+     order_id:window.localStorage['order_id']
+    },
+    function(data, status){
+
+       // 
+       var obj=JSON.parse(data);
+       window.localStorage["cart_count"]=obj.cart_count;
+        
+        swal("Your item is removed");
+        document.location.reload();
+  });
+
+
+}  
+
+function update_item(val)
+{
+var qty = $('#qty_'+val).val();
+ $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/update_cart",
+    {
+     id:val,
+     qty:qty,
+    },
+    function(data, status){
+
+      // 
+        swal("Your item is updated");
+        document.location.reload();
+  });
+
+
+}  
+        
+ 
 </script>
+
+
 
 
 
@@ -419,7 +697,7 @@ $(function(){
                                 <label for="user" class="col-sm-3 control-label">Email</label>
                                 <div class="col-sm-9">
                                     <!-- Input -->
-                                    <input type="text" class="form-control" id="email1" name="useremail" placeholder="Email">
+                                    <input type="email" class="form-control" id="email1" name="useremail" placeholder="Email">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -511,7 +789,7 @@ $(function(){
                     <div class="form-group">
                         <label for="email" class="col-sm-3 control-label">Email <span class="text-danger">*</span></label>
                         <div class="col-sm-9">
-                            <input type="text" name="useremail" value="" id="email" placeholder="Email" class="form-control">
+                            <input type="email" name="useremail" value="" id="email" placeholder="Email" class="form-control">
                                                     </div>
                     </div>
 
@@ -572,319 +850,3 @@ $(function(){
 
     </div>
 
-<script>
-
-function ajaxindicatorstart(text)
-{
-  if(jQuery('body').find('#resultLoading').attr('id') != 'resultLoading'){
-  jQuery('body').append('<div id="resultLoading" style="display:none"><div><img src="img/ajax-loader.gif"><div>'+text+'</div></div><div class="bg"></div></div>');
-  }
-
-  jQuery('#resultLoading').css({
-    'width':'100%',
-    'height':'100%',
-    'position':'fixed',
-    'z-index':'10000000',
-    'top':'0',
-    'left':'0',
-    'right':'0',
-    'bottom':'0',
-    'margin':'auto'
-  });
-
-  jQuery('#resultLoading .bg').css({
-    'background':'#000000',
-    'opacity':'0.7',
-    'width':'100%',
-    'height':'100%',
-    'position':'absolute',
-    'top':'0'
-  });
-
-  jQuery('#resultLoading>div:first').css({
-    'width': '250px',
-    'height':'75px',
-    'text-align': 'center',
-    'position': 'fixed',
-    'top':'0',
-    'left':'0',
-    'right':'0',
-    'bottom':'0',
-    'margin':'auto',
-    'font-size':'16px',
-    'z-index':'10',
-    'color':'#ffffff'
-
-  });
-
-    jQuery('#resultLoading .bg').height('100%');
-       jQuery('#resultLoading').fadeIn(300);
-    jQuery('body').css('cursor', 'wait');
-}
-function ajaxindicatorstop()
-{
-    jQuery('#resultLoading .bg').height('100%');
-       jQuery('#resultLoading').fadeOut(300);
-    jQuery('body').css('cursor', 'default');
-}
-jQuery(document).ajaxStart(function () {
-    //show ajax indicator
-ajaxindicatorstart('loading data.. please wait..');
-}).ajaxStop(function () {
-//hide ajax indicator
-ajaxindicatorstop();
-});
-jQuery.ajax({
-   global: false,
-   // ajax stuff
-});
-$(document).ready(function(){
-
-    var user = window.localStorage["username"];
-
-    
-     if(user=="" || !user)
-    {
-       $('#list_business').attr('href','login.html');
-        $('#login').addClass('signin');
-         $('#login').removeAttr('href');
-         $('#login').html('<i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"></i>Signin')
-           $('#post_requirement').hide();
-         $('#signup').show();
-     $('.myaccount').hide();
-$('#account_cart').attr('href','login.html');
-    }
-    else
-    {
-      $('#account_cart').attr('href','add_cart.html');
-      $('#cart_count').html(window.localStorage["cart_count"]);
-          $('#post_requirement').show();
-         $('#signup').hide();
-    $('.myaccount').show();
-    $('#email').val(user);
-        $('#list_business').attr('href','subscribe.html');
-        $('#login').removeClass('signin');
-        $('#login').attr('href','logout.html');
-         $('#login').html('<i class="fa fa-sign-in" style="color:#ffd700;font-size:25px;margin-right:10px"></i>Logout')
-    }
-
-    fetch_order();
-      fetch_state()
-     
-    $("#frmorder").submit(function(e){
-      e.preventDefault()
-    flag=true;
-           var quantity=$('#quantity').val();
-            var phone_no=$('#phone_no').val();
-            var email=$('#email').val();
-            var state=$('#state').val();
-            var city=$('#city').val();
-            var address=$('#address').val();
-            var amount=$('#amount').val();
-            var user_id=window.localStorage['id'];
-
-            if(flag==true && $("#quantity").val()=="")
-          {
-              $("#quantity").addClass('text-danger')
-              alert('Please Enter Quantity')
-              
-              $("#quantity").focus()
-              flag=false;
-          }
-          
-            if(flag==true && $("#state").val()=="")
-          {
-              $("#state").addClass('text-danger')
-              alert('Please Enter State')
-              $("#state").focus()
-              flag=false;
-          }
-
-            if(flag==true && $("#city").val()=="")
-          {
-              $("#city").addClass('text-danger')
-              alert('Please Enter City')
-              $("#city").focus()
-              flag=false;
-          }
- 
-
-          if(flag==true && $("#address").val()=="")
-          {
-              $("#address").addClass('text-danger')
-              alert('Please Enter Address')
-              $("#address").focus()
-              flag=false;
-          }
-          if(flag==true && $("#phone_no").val()=="")
-          {
-              $("#phone_no").addClass('text-danger')
-              alert('Please Enter Phone No')
-              $("#phone_no").focus()
-              flag=false;
-          }
-
-           if(flag==true && $("#email").val()=="")
-          {
-              $("#email").addClass('text-danger')
-              alert('Please Enter Email')
-              $("#email").focus()
-              flag=false;
-          }
-
-        
-
-
-           
-
-
-          
-            
-         if (flag==true)
-            {
-                console.log("start")
-                $.post("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/submit_order",
-            {
-                user_id:user_id,
-                order_id:window.localStorage['order_id'],
-                phone_no:phone_no,
-                email:email,
-                state:state,
-                city:city,
-                address:address,
-                amount:amount,
-                quantity:quantity
-            },
-            function(data, status){
-                    
-                              var jsondata = $.parseJSON(data)
-                                console.log(jsondata)
-                                if(jsondata.success>0)
-                                 {
-                                   swal("You Order is submited") 
-
-                                   window.localStorage.removeItem("order_id");
-                                   window.localStorage.removeItem("cart_count");
-                              window.location.href='myorders.html';
-
-                                }
-                })
-        }
-    })
-
-});
-
- function fetch_order()
- {
-        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_order/"+window.localStorage['order_id'],
-           
-            function(data, status){
-              var obj = JSON.parse(data);
-             console.log(obj)
-             var amount=0;
-             var offprice=0;
-             var offer=0;
-             var d = new Date();
-
-            var month = d.getMonth()+1;
-            var day = d.getDate();
-
-            var cdate =(day<10 ? '0' : '') + day+ '/' +
-                (month<10 ? '0' : '') + month + '/' + d.getFullYear() ;
-             
-             var html='<table><tr><th class="text-center">Product Name</th><th class="text-center">Price</th><th class="text-center">Qty</th><th class="text-center">Offer</th><th class="text-center">Subtotal</th></tr>';
-              $.each(obj, function(key,val) {
-
-                
-                 if(val.offer_to_date>=cdate)
-                 {
-                  offprice=val.price-(val.offer/100*100);
-                  offer=val.offer+'%';
-                  
-                 }
-                else
-                {
-                  offprice=val.price;
-                  offer="-";
-                }
-
-                html+='<tr><td class="text-center">'+val.title+'</td><td class="text-center">'+val.price+'</td><td class="text-center">'+val.quantity+'</td><td class="text-center">'+offer+'</td><td class="text-center">'+offprice*(val.quantity)+'</td></tr>'
-               
-
-                amount+=(offprice)*(val.quantity);
-              });
-              html+='<tr><td colspan="4" class="text-right"><b>Grand Total</b></td><td class="text-center">'+amount+'</td></tr></table>';
-              $('#amount').val(amount);
-              $('#accordinbox').html(html);
-             //  $('#product').val(obj[0].title);
-             //  $('#amount').val(obj[0].amount);
-             //  $('#quantity').val(obj[0].quantity);
-             // $('#price').val(obj[0].price);
-             // if($('#amount').val()==0)
-             //    {
-             //      $('#amount').val(obj[0].quantity*obj[0].price);
-             //    }
-                });
-
- }
-
- function fetch_state()
-        {
-            
-
-         var html='';
-
-        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_state",
-           
-            function(data, status){
-              var obj = JSON.parse(data);
-             
-              $.each(obj, function(key,val) {
-               
-
-              html+='<option value='+val.id+' >'+val.name+'</option>'
-              
-
-             
-                })
-             $('#state').append(html);
-            
-          });
-
-        }
-
-
-
-            function fetch_city()
-        {
-            var val=$("#state").val();
-
-         var html='';
-
-        $.get("http://www.bramhodyogexpo.in/UdyogMission/index.php/home/get_city/"+val,
-           
-            function(data, status){
-              var obj = JSON.parse(data);
-             
-              $.each(obj, function(key,val) {
-               
-
-              html+='<option value='+val.id+' >'+val.name+'</option>'
-              
-
-             
-                })
-             $('#city').append(html);
-             
-          });
-
-        }
- 
-      function change_qty()
-      {
-         var price= $('#price').val();
-
-         var quantity= $('#quantity').val();
-         $('#amount').val(parseFloat(price)*quantity);
-      }
-</script>
